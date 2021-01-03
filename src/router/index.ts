@@ -3,8 +3,6 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Path from "./PathEnum"
 import Name from "./NameEnum"
 import Home from '@/pages/Main.vue'
-import List from '@/pages/List.vue'
-import Detail from '@/pages/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -17,12 +15,12 @@ const routes: Array<RouteConfig> = [
   {
     path: Path.LIST,
     name: Name.LIST,
-    component: List
+    component: () => import('../pages/List.vue')
   },
   {
     path: '/:stackNameUrl',
     name: 'Detail',
-    component: Detail,
+    component: () => import('../pages/Detail.vue'),
     props: true,
   },  
 ]

@@ -28,7 +28,7 @@ import data from '../data/data';
 })
 
 export default class ItemWrapper extends Vue {
-    @Prop({ required: true }) public stackNameUrl!: string;
+    @Prop({ type: String, required: true }) public stackNameUrl!: string;
     private item:object = {};
 
     private translateIcon(icon: string): string{
@@ -57,11 +57,11 @@ export default class ItemWrapper extends Vue {
         return icon
     }
 
-    public get stackName() {
+    public get stackName(): string {
         return decodeURI(this.stackNameUrl).replace(/-/g, ' ');
     }
 
-    public created() {
+    public created(): void{
         // @ts-ignore
         this.item = data.find( fw => fw.name === this.stackName);
     }

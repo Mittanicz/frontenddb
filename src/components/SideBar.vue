@@ -17,7 +17,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Button extends Vue {
-    @Prop() isShow: boolean = false;
+    @Prop({ type: Boolean }) isShow: boolean = false;
     public name: string = 'l-sideBar'
 
 }

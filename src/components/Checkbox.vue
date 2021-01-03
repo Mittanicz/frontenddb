@@ -17,15 +17,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Checkbox extends Vue {
-    @Prop() label: string;
+    @Prop({ type: String }) public label: string;
     public name: string = 'c-checkbox'
 
-    public click(){
+    public click(): void{
         this.$emit('click')
     }
 
-    public updateValue(value: any){
-        console.log(value)
+    public updateValue(value: any): void{
         this.$emit('change', value)
     }
 }

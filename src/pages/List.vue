@@ -33,6 +33,9 @@
 </template>
 
 <script lang="ts">
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons'
+import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 import { Component, Vue } from 'vue-property-decorator';
 import MainLayout from '@/layout/MainLayout.vue';
 import ItemCard from '@/components/ItemCard.vue';
@@ -44,6 +47,7 @@ import LSideBar from '@/components/SideBar.vue';
 import data from '@/data/data';
 import { filter } from 'vue/types/umd';
 
+library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop)
 @Component({
   components: {
     MainLayout,
@@ -57,9 +61,10 @@ import { filter } from 'vue/types/umd';
 export default class List extends Vue {
     public name: string = 'list';
     private showFilter: boolean = false;
+    
     filteredData: Array<object> = [];
     search: string =  '';
-    stacks =  [
+    stacks: Array<object> =  [
         {
             checked: false,
             value: 'framework'
@@ -91,7 +96,7 @@ export default class List extends Vue {
         return s.replace(/ /g, '-');
     }
 
-    public getfilteredData(){
+    public getfilteredData(): void{
         this.filteredData = data;
         let filteredDataByfilters: Array<object> = [];
         let filteredDataBySearch: Array<object> = [];
@@ -109,7 +114,7 @@ export default class List extends Vue {
         }    
     }
 
-    created() {
+    public created(): void{
         this.getfilteredData();
     }
 }

@@ -29,7 +29,7 @@ import RoutePath from '@/router/PathEnum';
 })
 export default class Main extends Vue {
     public name: string = 'main';
-    private routePath = RoutePath;
+    private routePath: any = RoutePath;
 
     public goToList(){
         this.$router.push({ path: this.routePath.LIST })

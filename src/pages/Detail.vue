@@ -45,10 +45,14 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import MainLayout from '@/layout/MainLayout.vue';
 import CButton from '@/components/Button.vue';
 // @ts-ignore
 import data from '../data/data';
+library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 
 @Component({
     components: {
@@ -58,7 +62,7 @@ import data from '../data/data';
 })
 
 export default class ItemWrapper extends Vue {
-    @Prop({ required: true }) public stackNameUrl!: string;
+    @Prop({ type: String, required: true }) public stackNameUrl!: string;
     private item:object = {};
 
     private translateIcon(icon: string): string{
@@ -94,11 +98,11 @@ export default class ItemWrapper extends Vue {
         return text;
     }
 
-    public get stackName() {
+    public get stackName(): string {
         return decodeURI(this.stackNameUrl).replace(/-/g, ' ');
     }
 
-    public created() {
+    public created(): void {
         // @ts-ignore
         this.item = data.find( fw => fw.name === this.stackName);
     }

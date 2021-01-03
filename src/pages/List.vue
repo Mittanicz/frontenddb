@@ -1,5 +1,6 @@
 <template>
     <main-layout>
+        <template v-slot:main>
         <form v-on:submit="getfilteredData()">
             <c-input
                 label="search"
@@ -10,19 +11,21 @@
             />
         </form>
         <div class="l-wrapper">
-            <c-button class="u-mb-30" @click="showFilter = !showFilter">
+            <c-button class="u-mb-30" v-if="!isDesktop" @click="showSideBar = !showSideBar">
                 Filters
             </c-button>
         </div>
         <div class="c-cardWrapper">
             <template v-for="(item, index) in filteredData" >
                 <router-link class="c-cardWrapper__item" :to="sanitize(item.name)" :key="index">
-                    <item-card  :key="index" :item="item"></item-card>
+                    <item-card :key="index" :item="item"></item-card>
                 </router-link>
             </template>
         </div>
-        <template v-slot:modals>
-            <l-side-bar :isShow="showFilter" @click="showFilter = !showFilter">
+        </template>
+        <template v-slot:sideBar>
+            <l-side-bar :showSideBar="showSideBar" :isDesktop="isDesktop" @click="showSideBar = !showSideBar">
+                <h2 class="is-left u-mb-20" :isDesktop="isDesktop">Filters</h2>
                 <template v-for="(stack, index) in stacks">
                     <c-checkbox :label="stack.value" :key="index" v-model="stack.checked" @input="getfilteredData()">
                     </c-checkbox>
@@ -33,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons'
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
@@ -58,10 +61,8 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
   },
 })
 export default class List extends Vue {
-    public name: string = 'list';
-    private showFilter: boolean = false;
-    
     private filteredData: Array<object> = [];
+    private showSideBar: boolean = false;
     private search: string =  '';
     private stacks: Array<object> = [
         {
@@ -69,6 +70,7 @@ export default class List extends Vue {
             value: 'framework'
         },
         {
+
             checked: false,
             value: 'javascript'
         },
@@ -81,6 +83,19 @@ export default class List extends Vue {
             value: 'icons'
         }
     ];
+    public name: string = 'list';
+    public isDesktop: boolean = false;
+
+    private resize(): void{
+        let width: number = window.innerWidth;
+        if(width >= 768){
+            this.isDesktop = true;
+            this.showSideBar = true;
+        } else {
+            this.isDesktop = false;
+            this.showSideBar = false;
+        }
+    }
 
     public get selectedFilters(): any {
         let filters:any = [];
@@ -113,8 +128,10 @@ export default class List extends Vue {
         }    
     }
 
-    public created(): void{
+    public mounted(): void{
+        this.resize();
         this.getfilteredData();
+        window.addEventListener("resize", this.resize);
     }
 }
 </script>

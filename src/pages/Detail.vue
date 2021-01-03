@@ -1,5 +1,6 @@
 <template>
     <main-layout>
+        <template v-slot:main>
         <header class="c-title">
             <h1 class="c-title__title">
                 {{ item.name }}
@@ -40,6 +41,7 @@
             <c-button block link :href="item.website" target="_blank" class="u-mb-30">Website</c-button>
             <c-button block link secondary v-if="item.githubLink" :href="item.githubLink" target="_blank">Github</c-button>
         </section>
+        </template>
     </main-layout>
 </template>
 

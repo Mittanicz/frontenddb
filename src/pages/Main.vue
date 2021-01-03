@@ -1,5 +1,6 @@
 <template>
     <main-layout>
+        <template v-slot:main>
         <div class="c-titleWrapper">
             <h1 class="c-title">
                 FrontEnd Database
@@ -12,6 +13,7 @@
                 Browse
             </c-button>
         </div>
+        </template>
     </main-layout>
 </template>
 

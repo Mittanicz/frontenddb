@@ -1,27 +1,24 @@
 .c-card{
     box-shadow:#252a3129 1px 1px 5px 2px, #252a311f 0px 1px 4px 0px;
     border-radius: 4px;
+    background: $paletteWhite;
     padding: 5px 5px 5px 0;
     transition: $transition;
     display: flex;
     text-align: left;
 
     &:hover{
-        box-shadow: #252a3129 0px 1px 4px 0px, #252a311f 0px 4px 8px 0px;
+        box-shadow: #252a3129 2px 2px 6px 3px, #252a311f 1px 2px 5px 1px;
         transition: $transition;
     }
 
     @include tablet{
-        width: 100%;
+        padding: 15px;
     }
-
 }
 
 .c-card__img{
     margin-right: 10px;
-    max-width: 100px;
-    max-height: 100px;
-
 }
 
 .c-card__title{
@@ -67,8 +64,6 @@
     gap: 10px 10px;
 
     @include tablet{
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
     }
 }
 
@@ -76,6 +71,6 @@
     text-decoration: none;
 
     @include tablet{
-        display: flex;
+
     }
 }

@@ -2,16 +2,16 @@
     <div class="l-app">
         <l-header></l-header>
         <main class="l-main">
-            <slot />
+            <slot name="main" />
         </main>
-        <aside>
-          <slot name="modals" />
+        <aside class="l-sideBarWrapper">
+            <slot name="sideBar" />
         </aside>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import LHeader from '@/layout/Header.vue';
 
 @Component({

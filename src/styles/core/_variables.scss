@@ -1,0 +1,34 @@
+
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$widescreen: 1200px;
+
+$transition: .3s all ease-out;
+
+$palleteRed: ("lighter": #FAE0E2,"normal": #d3000f,"dark": #b8000d,"darker": #9E000B);
+$palleteYellow: ("lighter": #FAF5E0,"normal": #ffdf43,"dark": #ffd400,"darker": #CCA900);
+$palleteOrange: ("lighter": #FAEEE0,"normal": #df9d53,"dark": #c27824,"darker": #975D1C);
+$palleteBlue: ("lighter": #DDF3FE,"normal": #2872d7,"dark" :#205cac,"darker": #184581);
+$palleteGreen: ("lighter": #00A36D,"normal": #00a88f,"dark": #008571,"darker": #006644);
+$palleteGrey: ("lighter": #F4F4F4,"light": #D9D9D9,"normal":#b0b0b0,"dark":#737373,"darker": #161616);
+$paletteWhite: #fff !default;
+
+@function grey($tone: base){
+    @return map-get($palleteGrey, $tone)
+};
+@function green($tone: base){
+    @return map-get($palleteGreen, $tone)
+};
+@function blue($tone: base){
+    @return map-get($palleteBlue, $tone)
+};
+@function orange($tone: base){
+    @return map-get($palleteOrange, $tone)
+};
+@function yellow($tone: base){
+    @return map-get($palleteYellow, $tone)
+};
+@function red($tone: base){
+    @return map-get($palleteRed, $tone)
+};

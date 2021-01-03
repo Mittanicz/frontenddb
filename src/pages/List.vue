@@ -33,21 +33,20 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons'
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
-import { Component, Vue } from 'vue-property-decorator';
 import MainLayout from '@/layout/MainLayout.vue';
 import ItemCard from '@/components/ItemCard.vue';
 import CCheckbox from '@/components/Checkbox.vue';
 import CInput from '@/components/Input.vue';
 import CButton from '@/components/Button.vue';
 import LSideBar from '@/components/SideBar.vue';
-// @ts-ignore
-import data from '@/data/data';
-import { filter } from 'vue/types/umd';
+import data from '@/data/data.json';
 
-library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop)
+library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
+
 @Component({
   components: {
     MainLayout,
@@ -62,9 +61,9 @@ export default class List extends Vue {
     public name: string = 'list';
     private showFilter: boolean = false;
     
-    filteredData: Array<object> = [];
-    search: string =  '';
-    stacks: Array<object> =  [
+    private filteredData: Array<object> = [];
+    private search: string =  '';
+    private stacks: Array<object> = [
         {
             checked: false,
             value: 'framework'
@@ -83,8 +82,9 @@ export default class List extends Vue {
         }
     ];
 
-    public get selectedFilters(): Array<object> {
-        let filters:Array<object> = [];
+    public get selectedFilters(): any {
+        let filters:any = [];
+        // @ts-ignore
         let checkedFiters = this.stacks.filter(obj => obj.checked);
         checkedFiters.forEach(element => {
             // @ts-ignore
@@ -92,6 +92,7 @@ export default class List extends Vue {
         });
         return filters;
     }
+
     public sanitize(s: string){
         return s.replace(/ /g, '-');
     }
@@ -103,13 +104,11 @@ export default class List extends Vue {
         if (this.selectedFilters.length > 0) {
             // @ts-ignore
             filteredDataByfilters = this.filteredData.filter(obj => this.selectedFilters.every(val => obj.stack.indexOf(val) >= 0));
-            console.log(this.filteredData.filter(obj => this.selectedFilters.every(val => obj.stack.indexOf(val) >= 0)))
             this.filteredData = filteredDataByfilters;
         } 
         if (this.search !== '') {
             // @ts-ignore
             filteredDataBySearch = this.filteredData.filter(obj => obj.name.indexOf(this.search.toLowerCase()) >= 0);
-            console.log(this.search.toLowerCase())
             this.filteredData = filteredDataBySearch;
         }    
     }

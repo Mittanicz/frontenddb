@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "cypress run && vue-cli-service build",
+    "test:e2e": "vue-cli-service test:e2e",
     "build_local": "webpack-dev-server --inline --progress --config build/webpack.prod.conf.js",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:component": "npm run test:component"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -20,14 +21,17 @@
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
+    "@cypress/vue": "*",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "cypress": "^6.2.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
+    "vue-cli-plugin-cypress-experimental": "~1.2.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

@@ -1,6 +1,7 @@
 module.exports = {
     css: {
-        modules: true
+      modules: true,
+      extract: false
     },
     configureWebpack:{
         optimization: {

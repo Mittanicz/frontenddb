@@ -10,5 +10,5 @@ export default class Homepage extends Vue {}
 </script>
 
 <style lang="scss">
-@import './styles/style.scss';
+    @import './styles/style.scss';
 </style>

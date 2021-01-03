@@ -50,8 +50,7 @@ import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import MainLayout from '@/layout/MainLayout.vue';
 import CButton from '@/components/Button.vue';
-// @ts-ignore
-import data from '../data/data';
+import data from '@/data/data.json';
 library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 
 @Component({

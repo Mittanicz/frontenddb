@@ -31,7 +31,7 @@ export default class Main extends Vue {
     public name: string = 'main';
     private routePath: any = RoutePath;
 
-    public goToList(){
+    public goToList(): void{
         this.$router.push({ path: this.routePath.LIST })
     }
 }

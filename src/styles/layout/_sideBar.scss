@@ -3,10 +3,11 @@
         margin-top: 80px;
     }
 }
+
 .l-sideBar{
-    position: fixed;
     bottom: 0;
     left: 0;
+    position: fixed;
     right: 0;
 
     @include tablet{
@@ -15,14 +16,14 @@
 }
 
 .l-sideBar__body{
-    z-index: 1000;
-    box-shadow: rgba(37, 42, 49, 0.24) 0px 12px 24px -4px, rgba(37, 42, 49, 0.32) 0px 8px 60px 0px;
+    background: $paletteWhite;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    background: $paletteWhite;
+    box-shadow: rgba(37, 42, 49, .24) 0px 12px 24px -4px, rgba(37, 42, 49, .32) 0px 8px 60px 0px;
     padding: 40px 10px 10px;
     position: relative;
-    
+    z-index: 1000;
+
     @include tablet{
         background: none;
         box-shadow: none;
@@ -30,12 +31,11 @@
 }
 
 .l-sideBar__curtain{
-    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
     inset: 0px;
-    z-index: 800;
     overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.5);
-
+    position: fixed;
+    z-index: 800;
 }
 
 .l-sideBar__close{

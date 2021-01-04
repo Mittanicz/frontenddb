@@ -1,25 +1,26 @@
 .c-input{
     background: $paletteWhite;
     border: none;
-    box-shadow: rgb(186, 199, 213) 0px 0px 0px 1px inset;
     border-radius: 4px;
+    box-shadow: rgb(186, 199, 213) 0px 0px 0px 1px inset;
     color: grey('darker');
     filter: none;
     padding: 14px 10px;
 
-	&:required,
-	&:-moz-ui-invalid{
-		box-shadow: none;
+    &:required,
+    &:-moz-ui-invalid{
+        box-shadow: none;
 
-		&:focus{
+        &:focus{
             border: none;
         }
     }
-	&:-internal-autofill-previewed,
-	&:-internal-autofill-selected,
-	&:-webkit-autofill{
-		background-color: $paletteWhite !important;
-		border: none !important;
-		-webkit-box-shadow: 0 0 0 100px $paletteWhite inset;
+
+    &:-internal-autofill-previewed,
+    &:-internal-autofill-selected,
+    &:-webkit-autofill{
+        background-color: $paletteWhite !important;
+        border: none !important;
+        box-shadow: 0 0 0 100px $paletteWhite inset;
     }
 }

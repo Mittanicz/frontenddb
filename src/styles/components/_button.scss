@@ -1,28 +1,28 @@
 .c-btn{
-    padding: 14px 15px;
     background: green('normal');
     border: none;
-    text-align: center;
-    vertical-align: middle;
     border-radius: 4px;
     color: $paletteWhite;
+    cursor: pointer;
+    display: inline-block;
     font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
     margin: 0;
     outline: 0;
-    display: inline-block;
-    cursor: pointer;
+    padding: 14px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
     transition: $transition;
-    
+    vertical-align: middle;
+
     &:hover,
     &:focus,
     &:visited,
     &:active{
         background: green('dark');
         color: $paletteWhite;
-        transition: $transition;
         text-decoration: none;
+        transition: $transition;
     }
 }
 
@@ -30,23 +30,23 @@
     display: block;
     width: 100%;
 }
+
 a.c-btn--block{
     width: auto;
 }
 
 .c-btn--secondary{
     background: none;
-    color: grey('darker');
     border: 2px solid green('normal');
+    color: grey('darker');
 
     &:hover,
     &:focus,
     &:visited,
     &:active{
         background: none;
-        color: grey('darker');
         border: 2px solid green('dark');
+        color: grey('darker');
         transition: $transition;
-
     }
 }

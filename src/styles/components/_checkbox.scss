@@ -7,8 +7,8 @@
 }
 
 .c-checkbox__over{
-    display: inline-block; 
-    
+    display: inline-block;
+
     & + .c-checkbox__text{
         margin-left: 10px;
     }
@@ -16,7 +16,7 @@
 
 .c-checkbox__text{
     color: grey('darker');
-    
+
     & + .c-checkbox__over{
         margin-left: 10px;
     }
@@ -25,8 +25,8 @@
 .c-checkbox__input{
     display: inline-block;
     position: absolute;
-    visibility: hidden;  
-    
+    visibility: hidden;
+
     & + .c-checkbox__span{
         background-color: $paletteWhite;
         border: 1px solid grey('light');
@@ -40,12 +40,12 @@
         vertical-align: middle;
         width: 20px;
     }
-        
+
     &:checked + .c-checkbox__span{
         border-color: green('normal');
 
         &:before{
-            background: green('normal') url("~@/assets/icons/check.svg") no-repeat center;
+            background: green('normal') url('~@/assets/icons/check.svg') no-repeat center;
             content: '';
             display: inline-block;
             height: 21px;

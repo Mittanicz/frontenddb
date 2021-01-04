@@ -15,9 +15,9 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import LHeader from '@/layout/Header.vue';
 
 @Component({
-  components: {
-    LHeader
-  },
+    components: {
+        LHeader,
+    },
 })
 export default class MainLayout extends Vue {
     public name: string = 'main-layout';

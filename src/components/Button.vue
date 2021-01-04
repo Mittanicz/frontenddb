@@ -2,12 +2,7 @@
     <button :class="buttonClasses" @click="click()" v-if="!link">
         <slot />
     </button>
-    <a 
-        v-else
-        :class="buttonClasses" 
-        :href="href" 
-        :target="target"
-    >
+    <a v-else :class="buttonClasses" :href="href" :target="target">
         <slot />
     </a>
 </template>
@@ -22,19 +17,18 @@ export default class Button extends Vue {
     @Prop({ type: String }) public target!: string;
     @Prop({ type: Boolean, default: false }) public block: boolean;
     @Prop({ type: Boolean, default: false }) public secondary: boolean;
-    public name: string = 'c-button'
+    public name: string = 'c-button';
 
-    private click(): void{
-        this.$emit('click')
+    private click(): void {
+        this.$emit('click');
     }
 
-    private get buttonClasses(): object{
+    private get buttonClasses(): object {
         return {
             'c-btn': true,
             'c-btn--block': this.block,
-            'c-btn--secondary': this.secondary
-        }
+            'c-btn--secondary': this.secondary,
+        };
     }
 }
 </script>
-

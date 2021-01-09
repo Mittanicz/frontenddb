@@ -1,10 +1,10 @@
 <template>
-    <div class="l-app">
+    <div :class="appClasses">
         <l-header></l-header>
         <main class="l-main">
             <slot name="main" />
         </main>
-        <aside class="l-sideBarWrapper">
+        <aside class="l-sideBarWrapper" v-if="sideBar">
             <slot name="sideBar" />
         </aside>
     </div>
@@ -20,6 +20,14 @@ import LHeader from '@/layout/Header.vue';
     },
 })
 export default class MainLayout extends Vue {
+    @Prop({ type: Boolean }) public sideBar!: boolean;
     public name: string = 'main-layout';
+
+    private get appClasses() {
+        return {
+            'l-app': true,
+            'l-app--noSideBar': !this.sideBar,
+        };
+    }
 }
 </script>

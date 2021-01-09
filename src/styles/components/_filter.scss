@@ -1,0 +1,21 @@
+.c-filter{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    
+    @include tablet{
+        justify-content: flex-end;
+    }
+}
+
+.c-filter__controls{
+    align-items: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.c-filter__action{
+    cursor: pointer;
+    margin-right: 20px;
+}

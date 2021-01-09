@@ -6,10 +6,52 @@
 }
 
 .c-title__title{
+    font-size: 36px;
     margin-bottom: 30px;
 
 }
+
 .c-title__img{
-    margin-bottom: 30px;
     display: inline-block;
+    margin-bottom: 30px;
+}
+
+.c-titleHero{
+    background: linear-gradient(165deg, #ececec 50%, #fff 50%);
+    padding: 0 30px;
+
+    @include tablet{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.c-titleHero__img{
+    margin-bottom: 30px;
+    max-width: 500px;
+
+    @include tablet{
+        max-width: 350px;
+        order: 2;
+    }
+    
+    @include desktop{
+        max-width: 450px;
+    }
+}
+
+.c-titleHero__wrapper{
+    @include tablet{
+        align-self: center;
+        text-align: left;
+    }
+}
+
+.c-titleHero__title{
+    font-size: 28px;
+    
+    @include tablet{
+        font-size: 40px;
+        order: 1;
+    }
 }

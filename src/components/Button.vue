@@ -17,6 +17,7 @@ export default class Button extends Vue {
     @Prop({ type: String }) public target!: string;
     @Prop({ type: Boolean, default: false }) public block: boolean;
     @Prop({ type: Boolean, default: false }) public secondary: boolean;
+    @Prop({ type: Boolean, default: false }) public link: boolean;
     public name: string = 'c-button';
 
     private click(): void {
@@ -28,6 +29,7 @@ export default class Button extends Vue {
             'c-btn': true,
             'c-btn--block': this.block,
             'c-btn--secondary': this.secondary,
+            'c-btn--link': this.link,
         };
     }
 }

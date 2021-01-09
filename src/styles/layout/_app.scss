@@ -1,20 +1,29 @@
 .l-app{
+    padding-top: 120px;
+
     @include tablet{
         display: grid;
-        gap: 10px 10px;
+        gap: 30px 30px;
         grid-template-areas: '. l-sideBarWrapper l-main .'
             '. l-sideBarWrapper l-main .';
-        grid-template-columns: 0px minmax(160px, 180px) 1fr 0px;
+        grid-template-columns: 0px minmax(160px, 260px) 1fr 0px;
         grid-template-rows: 1fr;
         margin: 0 auto;
-        max-width: 992px;
+        max-width: $widescreen;
+    }
+}
+
+.l-app--noSideBar{
+    padding-top: 120px;
+    grid-template-areas: 'l-main';
+    grid-template-columns: 1fr;
+    max-width: 100%;
+
+    &.is-hero{
+        padding-top: 50px;
     }
 }
 
 .l-sideBarWrapper{
     grid-area: l-sideBarWrapper;
-}
-
-.l-main{
-    grid-area: l-main;
 }

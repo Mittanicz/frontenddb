@@ -17,12 +17,15 @@
 
     &:hover,
     &:focus,
-    &:visited,
     &:active{
         background: green('dark');
         color: $paletteWhite;
         text-decoration: none;
         transition: $transition;
+    }
+
+    + .c-btn{
+        margin-left: 10px;
     }
 }
 
@@ -42,11 +45,27 @@ a.c-btn--block{
 
     &:hover,
     &:focus,
-    &:visited,
     &:active{
         background: none;
         border: 2px solid green('dark');
         color: grey('darker');
         transition: $transition;
+    }
+
+    &.c-btn--link{
+        color: grey('darker');
+        
+        &:visited{
+            color: grey('darker');
+
+        }
+    }
+}
+
+.c-btn--link{
+    color: $paletteWhite;
+
+    &:visited{
+        color: $paletteWhite;
     }
 }

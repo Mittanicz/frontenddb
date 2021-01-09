@@ -1,0 +1,33 @@
+<template>
+    <aside>
+        <ul class="c-cardDetail__list">
+            <li v-if="info.publishDate">
+                Publish date: <strong>{{ info.publishDate }}</strong>
+            </li>
+            <li v-if="info.githubStars">
+                Github stars: <strong>{{ info.githubStars }}</strong>
+            </li>
+            <li v-if="info.developerName">
+                Developer: <strong>{{ info.developerName }}</strong>
+            </li>
+            <li v-if="info.githubLink">
+                <a :href="info.githubLink" target="_blank">Oficial website</a>
+            </li>
+            <li v-if="info.githubLink">
+                <a :href="info.githubLink" target="_blank">Github</a>
+            </li>
+        </ul>
+    </aside>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Info extends Vue {
+    @Prop({ type: Object, required: true }) public info!: object;
+    @Prop({ type: Boolean, required: false }) public isDesktop!: boolean;
+
+    public name: string = 'c-info';
+}
+</script>

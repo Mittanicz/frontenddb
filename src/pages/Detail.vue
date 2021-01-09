@@ -1,55 +1,70 @@
 <template>
-    <main-layout>
+    <main-layout :sideBar="false">
         <template v-slot:main>
-            <header class="c-title">
-                <h1 class="c-title__title">
-                    {{ item.name }}
-                </h1>
-                <img class="c-title__img" :src="require('@/assets/img/' + item.logo)" :alt="item.logo" />
-            </header>
-            <section class="c-cardDetail">
-                <div v-if="item.publishDate">
-                    Publish date: <strong>{{ item.publishDate }}</strong>
-                </div>
-                <div v-if="item.githubStars">
-                    Github stars: <strong>{{ item.githubStars }}</strong>
-                </div>
-                <div class="u-mb-20">
-                    Developer: <strong>{{ item.developerName }}</strong>
-                </div>
-                <ul class="c-cardDetail__badge" v-if="item.icons">
-                    <li class="c-cardDetail__badgeItem" v-for="(item, index) in item.icons" :key="index">
-                        <font-awesome-icon
-                            :icon="[translateIconGroup(item), translateIcon(item)]"
-                            size="lg"
-                            :key="index"
-                        />
-                        {{ item }}
-                    </li>
-                </ul>
-                <p v-html="item.desc"></p>
-                <template v-if="Object.keys(item.pros).length !== 0">
-                    <h2 class="is-left">Pros</h2>
-                    <ul class="c-cardDetail__list u-text-left">
-                        <li v-for="(value, name, index) in item.pros" :key="index">
-                            <div class="u-highLight">{{ converCamelCase(name) }}</div>
-                            {{ value }}
-                        </li>
-                    </ul>
-                </template>
-                <template v-if="Object.keys(item.cons).length !== 0">
-                    <h2 class="is-left">Cons</h2>
-                    <ul class="c-cardDetail__list u-text-left">
-                        <li v-for="(value, name, index) in item.cons" :key="'c' + index">
-                            <div class="u-highLight">{{ converCamelCase(name) }}</div>
-                            {{ value }}
-                        </li>
-                    </ul>
-                </template>
-                <c-button block link :href="item.website" target="_blank" class="u-mb-30">Website</c-button>
-                <c-button block link secondary v-if="item.githubLink" :href="item.githubLink" target="_blank"
-                    >Github</c-button
-                >
+            <section class="l-grid l-grid--widescreen c-card2">
+                <header class="c-banner u-mb-30">
+                    <div class="c-banner__img">
+                        <img :src="require('@/assets/img/' + item.logo)" :alt="item.logo" />
+                    </div>
+                </header>
+                <section class="l-grid l-grid--detail">
+                    <div class="detailHeader">
+                        <div class="c-title">
+                            <h1 class="c-title__title">
+                                {{ item.displayName }}
+                            </h1>
+                        </div>
+                        <ul class="c-cardDetail__badge u-mb-20" v-if="item.icons">
+                            <li class="c-cardDetail__badgeItem" v-for="(item, index) in item.icons" :key="index">
+                                <font-awesome-icon
+                                    :icon="[translateIconGroup(item), translateIcon(item)]"
+                                    size="lg"
+                                    :key="index"
+                                />
+                                {{ item }}
+                            </li>
+                        </ul>
+                        <hr class="u-divider" />
+                    </div>
+                    <div class="detailContent">
+                        <c-info :info="item" v-if="!isDesktop" :isDesktop="isDesktop"> </c-info>
+                        <p class="u-mb-30" v-html="item.desc"></p>
+                        <template v-if="Object.keys(item.pros).length !== 0">
+                            <h2>Pros</h2>
+                            <ul class="c-cardDetail__list">
+                                <li v-for="(value, name, index) in item.pros" :key="index">
+                                    <div class="u-fw-bold">{{ converCamelCase(name) }}</div>
+                                    {{ value }}
+                                </li>
+                            </ul>
+                        </template>
+                        <template v-if="Object.keys(item.cons).length !== 0">
+                            <h2>Cons</h2>
+                            <ul class="c-cardDetail__list">
+                                <li v-for="(value, name, index) in item.cons" :key="'c' + index">
+                                    <div class="u-fw-bold">{{ converCamelCase(name) }}</div>
+                                    {{ value }}
+                                </li>
+                            </ul>
+                        </template>
+                        <div class="l-grid l-grid--col2">
+                            <c-button block link :href="item.website" target="_blank">
+                                Website
+                            </c-button>
+                            <c-button
+                                block
+                                secondary
+                                link
+                                v-if="item.githubLink"
+                                :href="item.githubLink"
+                                target="_blank"
+                            >
+                                Github
+                            </c-button>
+                        </div>
+                    </div>
+                    <c-info :info="item" v-if="isDesktop" :isDesktop="isDesktop" class="detailInfo" />
+                </section>
             </section>
         </template>
     </main-layout>
@@ -62,6 +77,7 @@ import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import MainLayout from '@/layout/MainLayout.vue';
 import CButton from '@/components/Button.vue';
+import CInfo from '@/pages/Detail/Info.vue';
 import data from '@/data/data.json';
 library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 
@@ -69,11 +85,13 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
     components: {
         MainLayout,
         CButton,
+        CInfo,
     },
 })
 export default class ItemWrapper extends Vue {
     @Prop({ type: String, required: true }) public stackNameUrl!: string;
     private item: object = {};
+    public isDesktop: boolean = false;
 
     private translateIcon(icon: string): string {
         switch (icon) {
@@ -89,6 +107,15 @@ export default class ItemWrapper extends Vue {
                 return 'cubes';
             default:
                 return 'html5';
+        }
+    }
+
+    private resize(): void {
+        let width: number = window.innerWidth;
+        if (width >= 768) {
+            this.isDesktop = true;
+        } else {
+            this.isDesktop = false;
         }
     }
 
@@ -108,6 +135,13 @@ export default class ItemWrapper extends Vue {
         return text;
     }
 
+    private get objectClasses() {
+        return {
+            'l-grid ': true,
+            'l-grid--col2': this.isDesktop,
+        };
+    }
+
     public get stackName(): string {
         return decodeURI(this.stackNameUrl).replace(/-/g, ' ');
     }
@@ -115,6 +149,11 @@ export default class ItemWrapper extends Vue {
     public created(): void {
         // @ts-ignore
         this.item = data.find((fw) => fw.name === this.stackName);
+    }
+
+    public mounted(): void {
+        this.resize();
+        window.addEventListener('resize', this.resize);
     }
 }
 </script>

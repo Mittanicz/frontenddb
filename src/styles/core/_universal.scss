@@ -1,13 +1,9 @@
-.u-text-center{
-    text-align: center !important;
-}
-
-.u-text-left{
-    text-align: left !important;
-}
-
 .u-text-noUnderLine{
     text-decoration: none !important;
+}
+
+.u-mb-0{
+    margin-bottom: 0px !important;
 }
 
 .u-mb-10{
@@ -22,6 +18,12 @@
     margin-bottom: 30px !important;
 }
 
-.u-highLight{
+
+.u-fw-bold{
     font-weight: bold;
+}
+
+.u-divider{
+    border: 1px solid grey('light');
+    margin-bottom: 5px;
 }

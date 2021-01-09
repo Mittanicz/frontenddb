@@ -1,0 +1,31 @@
+.c-banner{
+    align-items: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &:before{
+        background: url('./assets/img/25332.jpg') center center;
+        background-size: cover;
+        bottom: 0;
+        content: '';
+        filter: blur(3px);
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.c-banner__img{
+    align-items: center;
+    background: $paletteWhite;
+    border-radius: 50%;
+    box-shadow: rgba(37, 42, 49, .16) 0px 0px 2px 0px, rgba(37, 42, 49, .12) 0px 2px 4px 0px;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    width: 150px;
+    z-index: 5;
+}

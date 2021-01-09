@@ -10,9 +10,10 @@
 @import 'layout/header';
 @import 'layout/header';
 @import 'layout/sideBar';
-@import 'layout/wrapper';
+@import 'layout/grid';
 
 @import 'components/title';
+@import 'components/filter.scss';
 @import 'components/nav';
 @import 'components/button';
 @import 'components/checkbox';
@@ -21,3 +22,4 @@
 @import 'components/formRow';
 @import 'components/card';
 @import 'components/iconList';
+@import 'components/banner';

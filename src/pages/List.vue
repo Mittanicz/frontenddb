@@ -1,33 +1,45 @@
 <template>
-    <main-layout>
+    <main-layout :sideBar="true">
         <template v-slot:main>
-            <form v-on:submit="getfilteredData()">
-                <c-input
-                    label="search"
-                    placeholder="Enter key word  ..."
-                    v-model="search"
-                    value="search"
-                    @input="getfilteredData()"
-                />
-            </form>
-            <div class="l-wrapper">
-                <c-button class="u-mb-30" v-if="!isDesktop" @click="showSideBar = !showSideBar">
+            <header class="c-filter">
+                <ul class="c-filter__controls">
+                    <li class="c-filter__action">
+                        <form v-on:submit="getfilteredData()">
+                            <c-input
+                                class="u-mb-0"
+                                placeholder="Enter key word  ..."
+                                v-model="search"
+                                value="search"
+                                @input="getfilteredData()"
+                            />
+                        </form>
+                    </li>
+                    <li class="c-filter__action" @click="filterGrid = false">
+                        <font-awesome-icon :icon="['fas', 'th']" />
+                    </li>
+                    <li class="c-filter__action" @click="filterGrid = true">
+                        <font-awesome-icon :icon="['fas', 'list']" />
+                    </li>
+                </ul>
+            </header>
+            <div v-if="!isDesktop">
+                <c-button class="u-mb-30" @click="showSideBar = !showSideBar">
                     Filters
                 </c-button>
             </div>
-            <div class="c-cardWrapper">
+            <div :class="filterGrid ? 'c-cardWrapper' : 'c-cardWrapper c-cardWrapper--grid'">
                 <template v-for="(item, index) in filteredData">
                     <router-link class="c-cardWrapper__item" :to="sanitize(item.name)" :key="index">
                         <item-card :key="index" :item="item"></item-card>
                     </router-link>
                 </template>
-                <template v-if="filteredData">
+                <template v-if="filteredData.length == 0">
                     <section class="c-card c-card--center">
                         <div class="c-title">
                             <h1 class="c-title__title">
                                 This is not the item you are looking for
                             </h1>
-                            <img class="c-title__img" src="@/assets/icons/deathStar.svg" width="150px" />
+                            <img class="c-title__img" src="@/assets/img/404.svg" width="250px" />
                         </div>
                     </section>
                 </template>
@@ -48,7 +60,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faIcons, faTh, faCubes, faList } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import MainLayout from '@/layout/MainLayout.vue';
 import ItemCard from '@/components/ItemCard.vue';
@@ -58,7 +70,7 @@ import CButton from '@/components/Button.vue';
 import LSideBar from '@/components/SideBar.vue';
 import data from '@/data/data.json';
 
-library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
+library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop, faList, faTh);
 
 @Component({
     components: {
@@ -73,23 +85,24 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 export default class List extends Vue {
     private filteredData: Array<object> = [];
     private showSideBar: boolean = false;
+    private filterGrid: boolean = true;
     private search: string = '';
     private stacks: Array<object> = [
         {
             checked: false,
-            value: 'framework',
+            value: 'Framework',
         },
         {
             checked: false,
-            value: 'javascript',
+            value: 'Javascript',
         },
         {
             checked: false,
-            value: 'css',
+            value: 'Css',
         },
         {
             checked: false,
-            value: 'icons',
+            value: 'Icons',
         },
     ];
     public name: string = 'list';

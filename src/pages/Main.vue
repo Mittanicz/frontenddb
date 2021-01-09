@@ -1,18 +1,21 @@
 <template>
-    <main-layout>
+    <main-layout :sideBar="false" class="is-hero">
         <template v-slot:main>
-            <div class="c-titleWrapper">
-                <h1 class="c-title">
-                    FrontEnd Database
-                </h1>
-                <p>
-                    List of frontend frameworks and libraries.<br />
-                    Explore numbers of JavaScript, CSS, Icon frameworks and libraries. Plus more...
-                </p>
-                <c-button block @click="goToList()">
-                    Browse
-                </c-button>
-            </div>
+            <header class="c-titleHero">
+                <img class="c-titleHero__img" src="@/assets/img/userFlow.svg" alt="" />
+                <div class="c-titleHero__wrapper">
+                    <h1 class="c-titleHero__title">
+                        FrontEnd Database
+                    </h1>
+                    <p>
+                        List of frontend frameworks and libraries.<br />
+                        Explore numbers of JavaScript, CSS, Icon frameworks and libraries. Plus more...
+                    </p>
+                    <c-button block @click="goToList()">
+                        Browse
+                    </c-button>
+                </div>
+            </header>
         </template>
     </main-layout>
 </template>

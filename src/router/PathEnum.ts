@@ -1,6 +1,7 @@
-enum PathEnum{
+enum PathEnum {
     MAIN = "/",
-    LIST = "/list"
+    LIST = "/list",
+    POLICY = "/policy"
 }
 
 export default PathEnum;

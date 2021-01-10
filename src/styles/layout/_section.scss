@@ -1,0 +1,15 @@
+.l-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 80vh;
+    padding: 0 30px;
+
+    @include tablet{
+        flex-wrap: nowrap;
+    }
+}
+
+.l-section__col{
+    flex: 1 1 100%;
+}

@@ -13,16 +13,22 @@ const routes: Array<RouteConfig> = [
     component: Home
   },
   {
+    path: Path.POLICY,
+    name: Name.POLICY,
+    component: () => import('@/pages/Policy.vue'),
+    props: true,
+  },
+  {
     path: Path.LIST,
     name: Name.LIST,
-    component: () => import('../pages/List.vue')
+    component: () => import('@/pages/List.vue')
   },
   {
     path: '/:stackNameUrl',
     name: 'Detail',
-    component: () => import('../pages/Detail.vue'),
+    component: () => import('@/pages/Detail.vue'),
     props: true,
-  },  
+  },
 ]
 
 const router = new VueRouter({

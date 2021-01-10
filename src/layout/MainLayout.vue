@@ -7,16 +7,19 @@
         <aside class="l-sideBarWrapper" v-if="sideBar">
             <slot name="sideBar" />
         </aside>
+        <c-cookie />
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import LHeader from '@/layout/Header.vue';
+import CCookie from '@/components/Cookie.vue';
 
 @Component({
     components: {
         LHeader,
+        CCookie
     },
 })
 export default class MainLayout extends Vue {

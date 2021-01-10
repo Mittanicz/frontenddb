@@ -14,8 +14,8 @@
                                 {{ item.displayName }}
                             </h1>
                         </div>
-                        <ul class="c-cardDetail__badge u-mb-20" v-if="item.icons">
-                            <li class="c-cardDetail__badgeItem" v-for="(item, index) in item.icons" :key="index">
+                        <ul class="ul-list--row u-mb-20" v-if="item.icons">
+                            <li class="c-badge" v-for="(item, index) in item.icons" :key="index">
                                 <font-awesome-icon
                                     :icon="[translateIconGroup(item), translateIcon(item)]"
                                     size="lg"
@@ -31,8 +31,8 @@
                         <p class="u-mb-30" v-html="item.desc"></p>
                         <template v-if="Object.keys(item.pros).length !== 0">
                             <h2>Pros</h2>
-                            <ul class="c-cardDetail__list">
-                                <li v-for="(value, name, index) in item.pros" :key="index">
+                            <ul class="ul-list">
+                                <li class="ul-list__item" v-for="(value, name, index) in item.pros" :key="index">
                                     <div class="u-fw-bold">{{ converCamelCase(name) }}</div>
                                     {{ value }}
                                 </li>
@@ -40,8 +40,8 @@
                         </template>
                         <template v-if="Object.keys(item.cons).length !== 0">
                             <h2>Cons</h2>
-                            <ul class="c-cardDetail__list">
-                                <li v-for="(value, name, index) in item.cons" :key="'c' + index">
+                            <ul class="ul-list">
+                                <li class="ul-list__item" v-for="(value, name, index) in item.cons" :key="'c' + index">
                                     <div class="u-fw-bold">{{ converCamelCase(name) }}</div>
                                     {{ value }}
                                 </li>
@@ -88,7 +88,7 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
         CInfo,
     },
 })
-export default class ItemWrapper extends Vue {
+export default class Detail extends Vue {
     @Prop({ type: String, required: true }) public stackNameUrl!: string;
     private item: object = {};
     public isDesktop: boolean = false;

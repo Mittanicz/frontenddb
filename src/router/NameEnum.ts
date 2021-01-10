@@ -1,6 +1,7 @@
-enum NameEnum{
+enum NameEnum {
     MAIN = "Main",
-    LIST = "List"
+    LIST = "List",
+    POLICY = "Policy"
 }
 
 export default NameEnum;

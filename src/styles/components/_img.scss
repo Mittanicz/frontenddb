@@ -1,0 +1,13 @@
+.c-img{
+    display: block;
+    margin: 0 auto 30px;
+    width: 340px;
+
+    @include tablet{
+        width: 350px;
+    }
+    
+    @include desktop{
+        width: 450px;
+    }
+}

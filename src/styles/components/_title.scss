@@ -17,26 +17,19 @@
 }
 
 .c-titleHero{
-    background: linear-gradient(165deg, #ececec 50%, #fff 50%);
+    background: linear-gradient(170deg, #ececec 50%, #fff 50%);
     padding: 0 30px;
 
     @include tablet{
         display: flex;
         justify-content: space-around;
-    }
-}
-
-.c-titleHero__img{
-    margin-bottom: 30px;
-    max-width: 500px;
-
-    @include tablet{
-        max-width: 350px;
-        order: 2;
+        height: 60vh;
     }
     
-    @include desktop{
-        max-width: 450px;
+    img{
+        @include tablet{
+            order: 2;
+        }
     }
 }
 

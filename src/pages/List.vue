@@ -34,7 +34,7 @@
                     </router-link>
                 </template>
                 <template v-if="filteredData.length == 0">
-                    <section class="c-card c-card--center">
+                    <section class="c-card">
                         <div class="c-title">
                             <h1 class="c-title__title">
                                 This is not the item you are looking for

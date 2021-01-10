@@ -15,7 +15,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Checkbox extends Vue {
+export default class Input extends Vue {
     @Prop({ type: String }) public label: string;
     @Prop({ type: String }) public placeholder: string;
     @Prop({ type: String }) public value: string;

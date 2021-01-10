@@ -1,7 +1,4 @@
-@font-face{
-    font-family: 'Roboto';
-    src: url('./assets/fonts/roboto.woff2') format('woff2');
-}
+
 
 *{
 
@@ -44,4 +41,8 @@ a{
         color: grey('darker');
         text-decoration: none;
     }
+}
+
+img{
+    max-width: 100%;
 }

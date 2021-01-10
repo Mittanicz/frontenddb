@@ -10,9 +10,13 @@
 @import 'layout/header';
 @import 'layout/header';
 @import 'layout/sideBar';
+@import 'layout/section';
+@import 'layout/cookie';
 @import 'layout/grid';
 
 @import 'components/title';
+@import 'components/badge';
+@import 'components/img';
 @import 'components/filter.scss';
 @import 'components/nav';
 @import 'components/button';
@@ -21,5 +25,6 @@
 @import 'components/input';
 @import 'components/formRow';
 @import 'components/card';
-@import 'components/iconList';
 @import 'components/banner';
+
+@import 'ul/list';

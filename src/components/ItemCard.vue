@@ -4,8 +4,8 @@
         <div class="c-card__body">
             <h1 class="c-card__title">{{ item.displayName }}</h1>
             <div class="u-mb-10">{{ item.shortDesc }}</div>
-            <ul class="c-iconList" v-if="item.icons">
-                <li class="c-iconList__item" v-for="(item, index) in item.icons" :key="index">
+            <ul class="ul-list ul-list--row" v-if="item.icons">
+                <li class="ul-list__item ul-list__item--pushRight" v-for="(item, index) in item.icons" :key="index">
                     <font-awesome-icon :icon="[translateIconGroup(item), translateIcon(item)]" size="lg" :key="index" />
                 </li>
             </ul>

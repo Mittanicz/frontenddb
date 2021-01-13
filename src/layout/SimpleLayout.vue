@@ -1,12 +1,9 @@
 <template>
-    <div class="l-app">
+    <div class="l-app l-app--noSideBar">
         <l-header></l-header>
         <main class="l-main">
             <slot name="main" />
         </main>
-        <aside class="l-sideBarWrapper">
-            <slot name="sideBar" />
-        </aside>
         <c-cookie />
     </div>
 </template>
@@ -22,7 +19,7 @@ import CCookie from '@/components/Cookie.vue';
         CCookie
     },
 })
-export default class MainLayoutSidebar extends Vue {
-    public name: string = 'main-layout-side-bar';
+export default class MainLayout extends Vue {
+    public name: string = 'main-layout';
 }
 </script>

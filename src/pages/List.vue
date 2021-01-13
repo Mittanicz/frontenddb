@@ -1,5 +1,5 @@
 <template>
-    <main-layout :sideBar="true">
+    <l-main-layout>
         <template v-slot:main>
             <header class="c-filter">
                 <ul class="c-filter__controls">
@@ -14,10 +14,10 @@
                             />
                         </form>
                     </li>
-                    <li class="c-filter__action" @click="filterGrid = false">
+                    <li class="c-filter__action" @click="filterGrid = false" v-if="isDesktop">
                         <font-awesome-icon :icon="['fas', 'th']" />
                     </li>
-                    <li class="c-filter__action" @click="filterGrid = true">
+                    <li class="c-filter__action" @click="filterGrid = true" v-if="isDesktop">
                         <font-awesome-icon :icon="['fas', 'list']" />
                     </li>
                 </ul>
@@ -54,7 +54,7 @@
                 </template>
             </l-side-bar>
         </template>
-    </main-layout>
+    </l-main-layout>
 </template>
 
 <script lang="ts">
@@ -62,7 +62,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIcons, faTh, faCubes, faList } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import MainLayout from '@/layout/MainLayout.vue';
+import LMainLayout from '@/layout/MainLayout.vue';
 import ItemCard from '@/components/ItemCard.vue';
 import CCheckbox from '@/components/Checkbox.vue';
 import CInput from '@/components/Input.vue';
@@ -74,7 +74,7 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop, 
 
 @Component({
     components: {
-        MainLayout,
+        LMainLayout,
         ItemCard,
         CCheckbox,
         CInput,
@@ -116,6 +116,7 @@ export default class List extends Vue {
         } else {
             this.isDesktop = false;
             this.showSideBar = false;
+            this.filterGrid = true;
         }
     }
 

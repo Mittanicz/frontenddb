@@ -1,5 +1,5 @@
 <template>
-    <main-layout :sideBar="false">
+    <l-simple-layout>
         <template v-slot:main>
             <section class="l-grid l-grid--widescreen c-card2">
                 <header class="c-banner u-mb-30">
@@ -67,7 +67,7 @@
                 </section>
             </section>
         </template>
-    </main-layout>
+    </l-simple-layout>
 </template>
 
 <script lang="ts">
@@ -75,7 +75,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import MainLayout from '@/layout/MainLayout.vue';
+import LSimpleLayout from '@/layout/SimpleLayout.vue';
 import CButton from '@/components/Button.vue';
 import CInfo from '@/pages/Detail/Info.vue';
 import data from '@/data/data.json';
@@ -83,7 +83,7 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 
 @Component({
     components: {
-        MainLayout,
+        LSimpleLayout,
         CButton,
         CInfo,
     },

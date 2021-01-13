@@ -1,5 +1,5 @@
 <template>
-    <main-layout :sideBar="false" class="is-hero">
+    <l-simple-layout :sideBar="false" class="is-hero">
         <template v-slot:main>
             <header class="c-titleHero u-mb-30">
                 <img class="c-img" src="@/assets/img/userFlow.svg" alt="" />
@@ -31,18 +31,18 @@
                 </div>
             </section>
         </template>
-    </main-layout>
+    </l-simple-layout>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MainLayout from '@/layout/MainLayout.vue';
+import LSimpleLayout from '@/layout/SimpleLayout.vue';
 import CButton from '@/components/Button.vue';
 import RoutePath from '@/router/PathEnum';
 
 @Component({
     components: {
-        MainLayout,
+        LSimpleLayout,
         CButton,
     },
 })

@@ -1,5 +1,5 @@
 <template>
-    <main-layout :sideBar="false">
+    <l-simple-layout>
         <template v-slot:main>
             <section class="l-grid l-grid--widescreen  c-card2">
             <h1>Cookies Policy</h1>
@@ -48,16 +48,16 @@
             </p>
             </section>
         </template>
-    </main-layout>
+    </l-simple-layout>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MainLayout from '@/layout/MainLayout.vue';
+import LSimpleLayout from '@/layout/SimpleLayout.vue';
 
 @Component({
     components: {
-        MainLayout,
+        LSimpleLayout,
     },
 })
 export default class Policy extends Vue {

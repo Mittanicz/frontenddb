@@ -28,11 +28,10 @@
                 </c-button>
             </div>
             <div :class="filterGrid ? 'c-cardWrapper' : 'c-cardWrapper c-cardWrapper--grid'">
-                <template v-for="(item, index) in filteredData">
-                    <router-link class="c-cardWrapper__item" :to="sanitize(item.name)" :key="index">
-                        <item-card :key="index" :item="item"></item-card>
-                    </router-link>
+                <template v-for="(index) in dataToShow">
+                    <item-card :item="filteredData[index-1]" :key="index"></item-card>
                 </template>
+                <c-button block secondary v-if="dataToShow < filteredData.length || filteredData.length > dataToShow" @click="loadMoreFilteredData()">Load more</c-button>
                 <template v-if="filteredData.length == 0">
                     <section class="c-card">
                         <div class="c-title">
@@ -87,6 +86,7 @@ export default class List extends Vue {
     private showSideBar: boolean = false;
     private filterGrid: boolean = true;
     private search: string = '';
+    private dataToShow: number = 5;
     private stacks: Array<object> = [
         {
             checked: false,
@@ -145,16 +145,27 @@ export default class List extends Vue {
                 this.selectedFilters.every((val) => obj.stack.indexOf(val) >= 0)
             );
             this.filteredData = filteredDataByfilters;
+            this.loadMoreFilteredData()
         }
         if (this.search !== '') {
             // @ts-ignore
             filteredDataBySearch = this.filteredData.filter((obj) => obj.name.indexOf(this.search.toLowerCase()) >= 0);
             this.filteredData = filteredDataBySearch;
+            this.loadMoreFilteredData()
         }
-        console.log(this.filteredData);
     }
 
-    public mounted(): void {
+    private loadMoreFilteredData(){
+        let length: number = this.filteredData.length - this.dataToShow
+        if(length < 5){
+            this.dataToShow = this.filteredData.length;
+
+        } else {
+            this.dataToShow += 5;
+        }
+    }
+
+    public beforeMount(): void {
         this.resize();
         this.getfilteredData();
         window.addEventListener('resize', this.resize);

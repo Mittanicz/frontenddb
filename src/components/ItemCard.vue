@@ -1,16 +1,18 @@
 <template>
-    <div class="c-card">
-        <img class="c-card__img" :src="require('@/assets/img/' + item.logo)" alt="Card image cap" />
-        <div class="c-card__body">
-            <h1 class="c-card__title">{{ item.displayName }}</h1>
-            <div class="u-mb-10">{{ item.shortDesc }}</div>
-            <ul class="ul-list ul-list--row" v-if="item.icons">
-                <li class="ul-list__item ul-list__item--pushRight" v-for="(item, index) in item.icons" :key="index">
-                    <font-awesome-icon :icon="[translateIconGroup(item), translateIcon(item)]" size="lg" :key="index" />
-                </li>
-            </ul>
+    <router-link class="c-cardWrapper__item" :to="sanitize(item.name)">
+        <div class="c-card">
+            <img class="c-card__img" :src="require('@/assets/img/' + item.logo)" :alt="item.logo + ' image'" />
+            <div class="c-card__body">
+                <h1 class="c-card__title">{{ item.displayName }}</h1>
+                <div class="u-mb-10">{{ item.shortDesc }}</div>
+                <ul class="ul-list ul-list--row" v-if="item.icons">
+                    <li class="ul-list__item ul-list__item--pushRight" v-for="(item, index) in item.icons" :key="index">
+                        <font-awesome-icon :icon="[translateIconGroup(item), translateIcon(item)]" size="lg" :key="index" />
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </router-link>
 </template>
 
 <script lang="ts">
@@ -44,6 +46,10 @@ export default class ItemCard extends Vue {
             icon = 'fas';
         }
         return icon;
+    }
+    
+    public sanitize(s: string) {
+        return s.replace(/ /g, '-');
     }
 }
 </script>

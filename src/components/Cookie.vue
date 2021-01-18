@@ -4,11 +4,10 @@
             <router-link to="/policy">
                       privacy and cookies policy. 
             </router-link>
-            </p>
+        </p>
         <c-button secondary @click="dismiss">
             <span>I agree</span>
         </c-button>
-        
     </div>
 </template>
 

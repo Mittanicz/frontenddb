@@ -77,7 +77,7 @@ import { faIcons, faTh, faCubes } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import LSimpleLayout from '@/layout/SimpleLayout.vue';
 import CButton from '@/components/Button.vue';
-import CInfo from '@/pages/Detail/Info.vue';
+import CInfo from '@/components/Info.vue';
 import data from '@/data/data.json';
 library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 

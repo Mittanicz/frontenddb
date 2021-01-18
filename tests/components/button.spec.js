@@ -2,7 +2,7 @@
 import { mount } from '@cypress/vue'
 import Button from '@/components/Button.vue'
 
-describe('Greetings', () => {
+describe('Check element', () => {
   it('Button is rendered', () => {
     mount(Button)
 

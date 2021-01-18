@@ -26,7 +26,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class Info extends Vue {
     @Prop({ type: Object, required: true }) public info!: object;
-    @Prop({ type: Boolean, required: false }) public isDesktop!: boolean;
 
     public name: string = 'c-info';
 }

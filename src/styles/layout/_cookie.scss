@@ -1,6 +1,5 @@
 .c-ck{
     position: fixed;
-    display: flex;
     align-items: center;
     bottom: 0;
     padding: 8px 10px;
@@ -10,6 +9,18 @@
     box-shadow: #252a3129 1px 1px 5px 2px, #252a311f 0px 1px 4px 0px;
 
     .c-btn{
-        margin-left: 10px;
+        margin: 0 auto;
+        display: block;
+        flex: 1 1 145px
+    }
+
+    @include tablet{
+        display: flex;
+
+        .c-btn{
+            margin-left: 20px;
+            max-width: 320px;
+        }
+    
     }
 }

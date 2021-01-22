@@ -102,6 +102,10 @@ export default class List extends Vue {
         },
         {
             checked: false,
+            value: 'Components',
+        },
+        {
+            checked: false,
             value: 'Icons',
         },
     ];

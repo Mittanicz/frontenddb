@@ -33,14 +33,20 @@ p{
 
 a{
     color: grey('darker');
+    transition: $transition;
+
+    &:visited{
+        color: grey('darker');
+    }
 
     &:hover,
     &:focus,
-    &:active,
-    &:visited{
-        color: grey('darker');
+    &:active{
+        color: #009882;
         text-decoration: none;
+        transition: $transition;
     }
+
 }
 
 img{

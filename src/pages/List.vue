@@ -135,7 +135,7 @@ export default class List extends Vue {
         return filters;
     }
 
-    public sanitize(s: string) {
+    public sanitize(s: string): string {
         return s.replace(/ /g, '-');
     }
 
@@ -160,11 +160,10 @@ export default class List extends Vue {
         }
     }
 
-    private loadMoreFilteredData(){
+    private loadMoreFilteredData(): any{
         let length: number = this.filteredData.length - this.dataToShow
         if(length < 5){
             this.dataToShow = this.filteredData.length;
-
         } else {
             this.dataToShow += 5;
         }

@@ -17,6 +17,7 @@ export default class Button extends Vue {
     @Prop({ type: String }) public target!: string;
     @Prop({ type: Boolean, default: false }) public block: boolean;
     @Prop({ type: Boolean, default: false }) public secondary: boolean;
+    
     public name: string = 'c-button';
 
     private click(): void {

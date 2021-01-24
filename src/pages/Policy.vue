@@ -62,6 +62,5 @@ import LSimpleLayout from '@/layout/SimpleLayout.vue';
 })
 export default class Policy extends Vue {
     public name: string = 'policy';
-
 }
 </script>

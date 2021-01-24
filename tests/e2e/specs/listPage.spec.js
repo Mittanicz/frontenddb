@@ -5,12 +5,12 @@ describe('Test list page', () => {
     cy.visit('/list')
     cy.get('.l-sideBar__body').should('be.visible');
     cy.get('.c-filter__controls').should('be.visible');
-    cy.get('.c-cardWrapper .c-btn').should('be.visible');
+    cy.get('.c-btn--block').should('be.visible');
   });
   it('Filter by checkbox', () => {
     cy.visit('/list')
     cy.get(':nth-child(4) > .c-checkbox__text').click();
-    cy.get('[href="/vue.js"]').should('not.exist');
+    cy.get('[href="/icoMoon"] > .c-card').should('not.exist');
   });
   it('Filter by search', () => {
     cy.visit('/list')
@@ -45,7 +45,7 @@ describe('Test list page mobile', {
   it('Filter by search', () => {
     cy.visit('/list')
     cy.get('.c-filter .c-input').type('vue');
-    cy.get('[href="/vue.js"]').should('be.visible');
+    cy.get('[href="/vue.js"] > .c-card').should('be.visible');
   });
   it('Filter by checkbox', () => {
     cy.visit('/list')
@@ -53,6 +53,6 @@ describe('Test list page mobile', {
     cy.get('.u-mb-30').click();
     cy.get('.l-sideBar__body .c-checkbox:nth-child(5)').click();
     cy.get('.l-sideBar__close').click()
-    cy.get('[href="/vue.js"]').should('not.exist');
+    cy.get('[href="/icoMoon"] > .c-card').should('not.exist');
   });
 });

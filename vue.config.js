@@ -1,13 +1,14 @@
 module.exports = {
     css: {
-      modules: true,
-      extract: false
+        modules: true,
+        extract: false
     },
-    configureWebpack:{
+    configureWebpack: {
         optimization: {
             splitChunks: {
-            chunks: 'all',
+                chunks: 'all',
             },
         }
-    }
+    },
+    publicPath: './',
 }

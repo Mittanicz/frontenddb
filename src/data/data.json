@@ -151,7 +151,9 @@
 		"displayName": "Material-ui",
 		"logo": "materialui.png",
 		"stack": [
-			"Components"
+			"Components",
+			"Javascript",
+			"Css"
 		],
 		"icons": [
 			"js",
@@ -282,7 +284,7 @@
 			"framework"
 		],
 		"shortDesc": "Semantic css for development",
-		"desc": "<p>Semantic UI has a lot of feature overlaps with other <a href=\"\//bootstrap\">popular frameworks<\/a> but the way it works (implied by the name) is based on the semantic nature of the class names that are used to build components.</p><p>In other words, the class names are human friendly.</p>",
+		"desc": "<p>Semantic UI has a lot of feature overlaps with other <a href=\"\/bootstrap\">popular frameworks<\/a> but the way it works (implied by the name) is based on the semantic nature of the class names that are used to build components.</p><p>In other words, the class names are human friendly.</p>",
 		"pros": {
 			"VeryEasyToUse": "This reason is one of the main ones for developers. Semantic UI is very intuitive.",
 			"LesstTimeToDesignAPage": "Naming Semantic UI classes with meaningful names not only make the learning curve shorter but also makes developing projects more intuitive and faster.",
@@ -465,11 +467,13 @@
 		"logo": "elementui.png",
 		"stack": [
 			"Components",
-			"Js"
+			"Css",
+			"Javascript"
 		],
 		"icons": [
 			"components",
-			"css"
+			"css",
+			"js"
 		],
 		"shortDesc": "Desktop UI library",
 		"desc": "<p>ElementUI is <a href=\"\//vue.js\">Vue<\/a> component library with world wide community. Its not a basic component library, but also full UI kit that designer and product managers can work with.</p><p> Its aiming on desktop UI but also has mobile version in mind. Also comes with grid system.</p>",
@@ -489,5 +493,98 @@
 		"developerName": "Community",
 		"githubLink": "https://github.com/ElemeFE/element",
 		"website": "https://element.eleme.io/#/en-US"
+	},
+	{
+		"name": "materialDesing",
+		"displayName": "Material desing",
+		"logo": "materialdesing.png",
+		"stack": [
+			"Components",
+			"Css",
+			"Javascript"
+		],
+		"icons": [
+			"components",
+			"css",
+			"js"
+		],
+		"shortDesc": "Material desing for all systems",
+		"desc": "<p>Material is a design system that can be applied for mobile devices and modern web browsers.</p><p> It comes with full guidelines on how to use it and give some useful tips. You can build web, android or iOS applications. With material you got ready to use components and <a href=\"\/font-Awesome\">icons<\/a>.</p>",
+		"pros": {
+			"DesignSystem": "ElementUI comes with a lot of components that are ready to use.",
+			"ComponentsList": "Material has huge library components for all devices.",
+			"Natural ": "When you understands basics, using material is natural and learning is easy."
+		},
+		"cons": {
+			"FixedWithMaterial": "Material gives you strict guidelines how to use it. You cannot go wild with imagination.",
+			"HardToChange": "If you want to change something its hard to do."
+		},
+		"githubStars": "+16k",
+		"publishDate": "2017",
+		"developerName": "Google",
+		"githubLink": "https://github.com/material-components",
+		"website": "https://material.io/"
+	},
+	{
+		"name": "backbone.js",
+		"displayName": "Backbone.js",
+		"logo": "backbone.png",
+		"stack": [
+			"Framework",
+			"Javascript"
+		],
+		"icons": [
+			"framework",
+			"js"
+		],
+		"shortDesc": "Comunicate trought RESTfull API",
+		"desc": "<p>Backbone.js is another JS framework to build SPA application. From other JS frameworks like <a href=\"\/vue.js\">Vue.js<\/a>, <a href=\"\/react.js\">React<\/a> etc. the key is using MVP structure and saving filesize. GZip version is 7.9kb only. Another main advantage is easy communication with RESTful API.",
+		"pros": {
+			"SmallSize": "Everything what you need is in small 7.9kb package.",
+			"CommentedCode": "The code is well commented and also documented.",
+			"Natural ": "When you understands basics, using material is natural and learning is easy."
+		},
+		"cons": {
+			"HardDependencies": "For use you need to install laso Underscore.js.",
+			"SmallCommunity": "Event its so small there are only few group who work with this framework.",
+			"Updates": "Nowadays its not so updated."
+		},
+		"githubStars": "+28k",
+		"publishDate": "2010",
+		"developerName": "Jeremy Ashkenas",
+		"githubLink": "https://github.com/jashkenas/backbone",
+		"website": "https://backbonejs.org/"
+	},
+	{
+		"name": "bootstrapvue",
+		"displayName": "Bootstrap Vue",
+		"logo": "bootstrapvue.png",
+		"stack": [
+			"Components",
+			"Javascript",
+			"Css"
+		],
+		"icons": [
+			"components",
+			"css",
+			"js"
+		],
+		"shortDesc": "Build responsive apps with boostrap and vue.js",
+		"desc": "<p>Bootstrap vue is project where <a href=\"\/bootstrap\">Bootstrap<\/a> css framework and <a href=\"\/vue.js\">Vue.js<\/a> framework comes together. With this combination you can build responsive, mobile-first and Araia accessible apps and websites. Contain a lots of components and more than 1200 icons. Ready to use.",
+		"pros": {
+			"SmallSize": "Everything what you need is in small 7.9kb package.",
+			"CommentedCode": "The code is well commented and also documented.",
+			"Natural ": "When you understands basics, using material is natural and learning is easy."
+		},
+		"cons": {
+			"HardDependencies": "For use you need to install laso Underscore.js.",
+			"SmallCommunity": "Event its so small there are only few group who work with this framework.",
+			"Updates": "Nowadays its not so updated."
+		},
+		"githubStars": "+13k",
+		"publishDate": "2019",
+		"developerName": "Jeremy Ashkenas",
+		"githubLink": "https://github.com/bootstrap-vue/bootstrap-vue",
+		"website": "https://bootstrap-vue.org/"
 	}
 ]

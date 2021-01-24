@@ -23,12 +23,13 @@
     @include tablet{
         display: flex;
         justify-content: space-around;
-        height: 60vh;
+        height: 80vh;
     }
     
     img{
         @include tablet{
             order: 2;
+            width: 500px;
         }
     }
 }
@@ -37,6 +38,8 @@
     @include tablet{
         align-self: center;
         text-align: left;
+        margin-right: 150px;
+        max-width: 650px;
     }
 }
 

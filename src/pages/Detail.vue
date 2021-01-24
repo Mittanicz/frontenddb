@@ -4,7 +4,7 @@
             <section class="l-grid l-grid--widescreen c-card2">
                 <header class="c-banner u-mb-30">
                     <div class="c-banner__img">
-                        <img :src="require('@/assets/img/' + item.logo)" :alt="item.logo" />
+                        <img :src="require('@/assets/img/' + item.logo)" :alt="item.logo + ' image'" />
                     </div>
                 </header>
                 <section class="l-grid l-grid--detail">
@@ -79,6 +79,7 @@ import LSimpleLayout from '@/layout/SimpleLayout.vue';
 import CButton from '@/components/Button.vue';
 import CInfo from '@/components/Info.vue';
 import data from '@/data/data.json';
+import IItem from '@/data/IItem';
 library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 
 @Component({
@@ -90,7 +91,7 @@ library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop);
 })
 export default class Detail extends Vue {
     @Prop({ type: String, required: true }) public stackNameUrl!: string;
-    private item: object = {};
+    private item: IItem;
     public isDesktop: boolean = false;
 
     private translateIcon(icon: string): string {
@@ -135,20 +136,13 @@ export default class Detail extends Vue {
         return text;
     }
 
-    private get objectClasses() {
-        return {
-            'l-grid ': true,
-            'l-grid--col2': this.isDesktop,
-        };
-    }
-
     public get stackName(): string {
         return decodeURI(this.stackNameUrl).replace(/-/g, ' ');
     }
 
     public created(): void {
         // @ts-ignore
-        this.item = data.find((fw) => fw.name === this.stackName);
+        this.item = data.find((item) => item.name === this.stackName);
     }
 
     public mounted(): void {

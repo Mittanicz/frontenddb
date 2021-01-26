@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "cypress run && vue-cli-service build",
+    "build": "vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
     "build_local": "webpack-dev-server --inline --progress --config build/webpack.prod.conf.js",
     "test:component": "npm run test:component"

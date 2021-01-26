@@ -45,5 +45,5 @@ jobs:
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           protocol: ftp
           # Folder to upload from, must end with trailing slash /
-          local-dir: /dist
+          local-dir: /dist/
           server-dir: /domains/frontenddb.com/

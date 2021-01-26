@@ -46,4 +46,4 @@ jobs:
           protocol: ftp
           # Folder to upload from, must end with trailing slash /
           local-dir: dist/
-          server-dir: domains/frontenddb.com/
+          server-dir: /www/domains/frontenddb.com/

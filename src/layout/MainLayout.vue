@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import LHeader from '@/layout/Header.vue';
 import CCookie from '@/components/Cookie.vue';
 

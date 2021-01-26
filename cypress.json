@@ -5,6 +5,7 @@
   "integrationFolder": "tests/e2e",
   "testFiles": "**/*.spec.js*",
   "video": false,
+  "projectId": "mhwrwv",
   "screenshotOnRunFailure": true,
   "experimentalComponentTesting": true,
   "componentFolder": "tests/components"

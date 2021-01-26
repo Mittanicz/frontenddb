@@ -1,0 +1,16 @@
+export default interface IItem {
+    name?: string,
+    displayName?: string,
+    logo?: string,
+    stack?: Array<string>,
+    icons?: Array<string>,
+    shortDesc?: string,
+    desc?: string,
+    pros?: Object,
+    cons?: Object,
+    githubStars?: string,
+    publishDate?: string,
+    developerName?: string,
+    githubLink?: string,
+    website?: string,
+}

@@ -2,11 +2,11 @@
     <div v-if="show" class="c-ck">
         <p>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our 
             <router-link to="/policy">
-                      privacy and cookies policy. 
+                privacy and cookies policy. 
             </router-link>
         </p>
         <c-button secondary @click="dismiss">
-            <span>I agree</span>
+            I agree
         </c-button>
     </div>
 </template>
@@ -27,6 +27,7 @@ export default class Cookie extends Vue {
     private cookieDomain: string = "feDbCookie";
     private cookiePath: string = "/";
     private cookieExpiryDays: Number = 365;
+    
     public name: string = 'c-cookie';
 
     get cookie(): boolean {

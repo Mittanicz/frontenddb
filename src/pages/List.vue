@@ -27,11 +27,10 @@
                     Filters
                 </c-button>
             </div>
-            <div :class="filterGrid ? 'c-cardWrapper' : 'c-cardWrapper c-cardWrapper--grid'">
+            <div :class="filterGrid ? 'c-cardWrapper u-mb-20' : 'c-cardWrapper c-cardWrapper--grid u-mb-20'">
                 <template v-for="(index) in dataToShow">
                     <item-card :item="filteredData[index-1]" :key="index"></item-card>
                 </template>
-                <c-button block secondary v-if="dataToShow < filteredData.length || filteredData.length > dataToShow" @click="loadMoreFilteredData()">Load more</c-button>
                 <template v-if="filteredData.length == 0">
                     <section class="c-card">
                         <div class="c-title">
@@ -43,6 +42,7 @@
                     </section>
                 </template>
             </div>
+             <c-button block secondary v-if="dataToShow < filteredData.length || filteredData.length > dataToShow" @click="loadMoreFilteredData()">Load more</c-button>
         </template>
         <template v-slot:sideBar>
             <l-side-bar :showSideBar="showSideBar" :isDesktop="isDesktop" @click="showSideBar = !showSideBar">
@@ -90,11 +90,7 @@ export default class List extends Vue {
     private stacks: Array<object> = [
         {
             checked: false,
-            value: 'Framework',
-        },
-        {
-            checked: false,
-            value: 'Javascript',
+            value: 'Components',
         },
         {
             checked: false,
@@ -102,7 +98,15 @@ export default class List extends Vue {
         },
         {
             checked: false,
+            value: 'Framework',
+        },
+        {
+            checked: false,
             value: 'Icons',
+        },
+        {
+            checked: false,
+            value: 'Javascript',
         },
     ];
     public name: string = 'list';
@@ -131,7 +135,7 @@ export default class List extends Vue {
         return filters;
     }
 
-    public sanitize(s: string) {
+    public sanitize(s: string): string {
         return s.replace(/ /g, '-');
     }
 
@@ -142,6 +146,7 @@ export default class List extends Vue {
         if (this.selectedFilters.length > 0) {
             // @ts-ignore
             filteredDataByfilters = this.filteredData.filter((obj) =>
+                // @ts-ignore
                 this.selectedFilters.every((val) => obj.stack.indexOf(val) >= 0)
             );
             this.filteredData = filteredDataByfilters;
@@ -155,11 +160,10 @@ export default class List extends Vue {
         }
     }
 
-    private loadMoreFilteredData(){
+    private loadMoreFilteredData(): any{
         let length: number = this.filteredData.length - this.dataToShow
         if(length < 5){
             this.dataToShow = this.filteredData.length;
-
         } else {
             this.dataToShow += 5;
         }

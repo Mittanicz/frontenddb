@@ -5,29 +5,42 @@ import Name from "./NameEnum"
 import Home from '@/pages/Main.vue'
 
 Vue.use(VueRouter)
+const pageTitle = 'Frontend DB - '
 
 const routes: Array<RouteConfig> = [
     {
         path: Path.MAIN,
         name: Name.MAIN,
-        component: Home
+        component: Home,
+        meta: {
+            title: 'Homepage'
+        }
     },
     {
         path: Path.POLICY,
         name: Name.POLICY,
         component: () => import('@/pages/Policy.vue'),
         props: true,
+        meta: {
+            title: pageTitle + 'Privacy and Policy'
+        }
     },
     {
         path: Path.LIST,
         name: Name.LIST,
-        component: () => import('@/pages/List.vue')
+        component: () => import('@/pages/List.vue'),
+        meta: {
+            title: pageTitle + 'List'
+        }
     },
     {
         path: '/:stackNameUrl',
         name: 'Detail',
         component: () => import('@/pages/Detail.vue'),
         props: true,
+        meta: {
+            title: pageTitle + window.location.pathname.substring(1)
+        }
     },
 ]
 

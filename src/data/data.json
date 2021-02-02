@@ -42,7 +42,7 @@
 			"framework"
 		],
 		"shortDesc": "Fast evolving framework",
-		"desc": "<p>React.js created in 2011 by company Facebook. Its open-source JavaScript library(not a full-fledged framework). First started as experiment for “newsfeed” then expanded. React can be considered as one of the biggest influential disruptors in the web development.</p><p> Its introduced as component-based, function and declarative programming style for creating interactive user interfaces. In most cases used as single page applications.</p> Its fast framewroks thanks to “Virtual DOM” - means rendering only components that changed. So its not re-rendering whole page but only changed parts.</p><p> Another thing is that React use JSX syntax instead of JavaScript. Although React presents a slightly steeper learning curve than other best front end JavaScript frameworks(<a href=\"\/vue.js\">Vue.js<\/a> or <a href=\"\/angular.js\">Angular.js<\/a>).React.js is consider as one of the most popular Javascript framework.",
+		"desc": "<p>React.js created in 2011 by company Facebook. Its open-source JavaScript library(not a full-fledged framework). React can be considered as one of the biggest influential disruptors in the web development.</p><p>Its introduced as component-based, function and declarative programming style for creating interactive user interfaces so react main purpose is view layer in MVC applications.In React you can create components using js,css and htmls to speed up your development. Using those components to build up ui is fast and efficient.</p><p>Each component is its in own and its not allowing to change its state(view) other than dispatching to store data. In this way React secure deterministic view and changes only when you tell him to do.For creating custom components React uses JSX - and JS extension. JSX is easy declarative markup that helps you target many platforms.</p><p>Another think that react has is synthetic events. Basicali its wrapper around DOM events and provides smooth cross-platform event handling. Automatic UI updates that saves CPU and avoid memory leaks.</p><p>Last think to mention its components lifecycle. In basic components can be in many states. React makes sure that component is not mutated in wrong time so you can rely on consistent data and application states. There are many phases that you can work with.</p>",
 		"pros": {
 			"ReusableComponent": "So importing UI components without breaking a sweat insteading of coding them from scratch.",
 			"EasyIntegration": "React allows easy integration with other front-end and back-end framework like the popular PHP framework Laravel to work in tandem without a hitch.",
@@ -74,7 +74,7 @@
 			"icons"
 		],
 		"shortDesc": "Build your own icon pack",
-		"desc": "Available as both a website and an app, IcoMoon offers more than 4,000 free icons and offline storage of icons. Each icon pack features detailed licensing so that designers and developers know exactly how icons can be used. Users can also make their own custom icon fonts.",
+		"desc": "<p>Icomoon provide moder solution to create your own icon pack. Offering 5500+ icons in many formats its one of the best icons pack available.</p> <p>You can choose icon pack that contains same icons or you can create your own collection of icons from other pack. So you can combine font Awesome pack with bootstrap icons for example.</p><p>This is done in IcoMoon app that run in browser. In IcoMoon app you can edit icons like size, color, aling and layer, import your own svg icons and editem. Also option to create svg sprites or download icons in different format, like sprite, png, svg or fonts.</p>",
 		"pros": {},
 		"cons": {},
 		"githubStars": "",
@@ -96,7 +96,7 @@
 			"framework"
 		],
 		"shortDesc": "Build scalable enterprise-scale application",
-		"desc": "<p>Ember is open-source Javascript framework used to build scalable enterprise-scale application. Unlike <a href=\"\/list\">others frameworks<\/a> Ember.js is based on the Model-View-ViewModel (MVVW) architecture pattern.</p><p> Most iconic feature is Command-line interface tool which boost productivity. Another important think is that as passionate community.</p>",
+		"desc": "<p>Ember is open-source Javascript framework used for building enterprise-scale applications. Ember js is based on Model View Viewmodel so its kind of different from other frameworks that focus only on view layer.</p><p>Its use glimmer VM for DOM rendering and for update. In base Ember has Object models that are almost same as Javascript object. For routing is using own routes system that delivers template to users. Templates are consisted of components. Those “bricks” are reusable code that build up your application</p><p>Other main concept are models. Basically object that stores data and maintain them. Around Models there are controllers that act as bridge between views and models. Those are responsible for modification and updates.</p>",
 		"pros": {
 			"Api": "Ember provides a simple mechanism to work with APIs.",
 			"ConventionOverConfiguration": "So you can jump straight away to coding and building your web application.",
@@ -130,7 +130,7 @@
 			"framework"
 		],
 		"shortDesc": "Material desing done in css",
-		"desc": "<p>Materialize CSS is a UI framework which is created with CSS, JavaScript and HTML. It is based on material desing developed by Google.</p><p>Materialize CSS is also known as Material Design. It is a design language which combines the classic principles of successful design along with innovation and technology.</p<p>Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform.</p>",
+		"desc": "<p>Materialize CSS is a UI component library which is created with CSS, JavaScript and HTML. It is based on material design developed by Google.</p><p>Materialize is framework that speeds up development. It care about hard thinks so you can focus on details. They also offers some animations and transitions to enchant user experience. This is heavily focused on micro animations.</p><p>Materialize also provide mobile solution not just responsive design but also mobile like touches and gests like swipe.</p>",
 		"pros": {
 			"MaterialDesign": "Based on one of the most spread design  system. Used for mobile, tablet and desktop.",
 			"Animations": "Materialize comes with built in animation system.",
@@ -161,7 +161,7 @@
 			"Components"
 		],
 		"shortDesc": "React components for better UI",
-		"desc": "<p>Material-ui is <a href=\"\/react.js\">react<\/a> component library for fast and easy web development.</p><p> Visuals are based on <a href=\"\/materializecss\">material design<\/a>. Design mobile and website application and large scale with no time. Comes with large palette of components to choose from. Also you can customize components</p>",
+		"desc": "<p>Material-ui is world most famous React component library. This components library offers modern material design, huge list of components, various approaches to design and system and powerful theming.</p><p>Everyone knows material design, modern solution for apps and web. Without any changes Material-UI offers that design. With components you are able to build almost anything. In same time Material-UI offers a component API that boosts your powers of development.</p><p>One important thing is that Material-UI is giving you a layer of access. So even junior developer can you this component library without worries. At the same time with the last layer you can change various functions. Also this applies for design also!</p><p>Great feature is also theming. With themes you can create your very unique app design. Material-ui offers overwriting variables and other key elements to change colors, font, behavior and so on.</p>",
 		"pros": {
 			"MaterialDesign": "Beautiful design for all devices.",
 			"HugeComponentLibrary": "Materialize comes with built in animation system.",
@@ -191,7 +191,7 @@
 			"framework"
 		],
 		"shortDesc": "Typescript based components",
-		"desc": "<p>Svelte.js is an open-source component-based front- end JavaScript framework written in Typescript. Svelte was launched in 2016 and since then is gaining popularity. For many developers svelte is consider as game-changing and revolutionary.</p> <p><a href=\"\/list\">Unlike from others<\/a> Svelte has no virtual DOM, instead you build components boilerplate-free in simple HTML, CSS, and JavaScript code. Svelte Compiler then compiles this code into small framework-free vanilla JavaScript modules during build time and surgically updates the DOM when the state changes.</p><p> So unlike other traditional frameworks like React or Vue, Svelte does not require high browser processing. As a result, apps built with Svelte are lightning-fast with excellent performance.</p><p> Other major advantages include zero client-side dependencies, absence of complex state management libraries.</p>",
+		"desc": "<p>Svelte.js is an open-source component-based front- end JavaScript framework written in Typescript. Svelte was launched in 2016 and since then is gaining popularity. For many developers svelte is consider as game-changing and revolutionary.</p><p>Unlike from other Svelte has no virtual DOM, instead you build components boilerplate-free in simple HTML, CSS, and JavaScript code. Svelte Compiler then compiles this code into small framework-free vanilla JavaScript modules during build time and surgically updates the DOM when the state changes.</p><p>So unlike other traditional frameworks like React or Vue, Svelte does not require high browser processing. As a result, apps built with Svelte are lightning-fast with excellent performance. Other major advantages include zero client-side dependencies, absence of complex state management libraries.</p>",
 		"pros": {
 			"Components": "Build small chunks of application and reused them all the time.",
 			"EasyToLearn": "Svelte has gentle learing curve. Thanks  to simple HTML, CSS and JavaScript no additional knowledge of typescript or JSX is required.",
@@ -223,7 +223,7 @@
 			"framework"
 		],
 		"shortDesc": "Most popular Css framework",
-		"desc": "<p>Bootstrap is the most popular css framework, its not exclusively a CSS framework, its most popular features are the CSS-based ones. It has large number of components that you can use to build prototypes or full web site application.</p><p>First release was in 2011 and since then its gaining popularity. Growing with components library and variability.</p>",
+		"desc": "<p>Bootstrap is the most popular css framework, its not exclusively a CSS framework, its most popular features are the CSS-based ones. It has large number of components that you can use to build prototypes or full web site application.</p><p>Bootstrap offers wide browser compatibility, consistent design and reusable components. In same package you got some javascript components to boost up user experience. So in short with bootstrap you can focus on developing rather than constructing your base components from scratch.</p><p>Most important part is mobile first approach. With this you are able quicky build up responsive website that will work on any device. Another great feature is grid system. Easy to understand and very powerful. This is one of reason why so bootstrap popular.</p><p>Bootstrap has more features and all of them are well documented with examples.</p>",
 		"pros": {
 			"Components": "Bootstrap has plenty of components that you can use. ",
 			"GridSystem": "One of the most useable grid system based on flex.",
@@ -254,7 +254,7 @@
 			"framework"
 		],
 		"shortDesc": "Simple semantics css framework",
-		"desc": "<p>Its primary feature is the fact that its components are largely dependent on flexbox, making it a truly modern framework. You can think of Bulma is being somewhat like a hybrid of <a href=\"\//bootstrap\">Bootstrap<\/a> and <a href=\"\//semanticui\">Semantic UI<\/a> but without any of the complexity.</p><p> It uses some of the same principles as Semantic UI with its class names, includes many of the popular components, yet manages to keep things simple</p>",
+		"desc": "<p>Bulma is css framework that allows you to style your page or app with ease. Its based on flexbox and its also automatically adjust page and components to screen size so its also responsive.</p><p>To use bulma you need to type mostly html code. So less css in your html to achieve same things like bootstrap or Foundation. With that its very easy to start new project or implement bulma to existing one. When you start using bulma you will find out that syntax is consistent and intuitive = easy to learn easy to use.</p><p>Based on Sass you can extend components or utility classes by your self, or you can import only components that you really need.</p>",
 		"pros": {
 			"Responsivity": "The framework is mobile first and works similarly to the popular Bootstrap CSS.",
 			"WellDocumented": "Bulma is very well documented, and comes with an active community of people ready to help with projects.",
@@ -284,7 +284,7 @@
 			"framework"
 		],
 		"shortDesc": "Semantic css for development",
-		"desc": "<p>Semantic UI has a lot of feature overlaps with other <a href=\"\/bootstrap\">popular frameworks<\/a> but the way it works (implied by the name) is based on the semantic nature of the class names that are used to build components.</p><p>In other words, the class names are human friendly.</p>",
+		"desc": "<p>Semantic UI is css framework powered by Less and Jquery. Main goal is to provide lightweight user experience with glance.</p><p>Every component, which is basic building block in Semantic has its own types and states. So even with less components you can still deliver amazing website.</p><p>With this feature comes another. That's naming. Every class has its descriptive name that explain what to expect when you are using it. And as UI kit its using semantic html tags for styling.</p><p>Great feature is also minimalistic styling that opens possibility to customize styling that fits your needs. Its easy to import and customize. What is important is that you can import only components that you want to customize or you want to use in your project.</p>",
 		"pros": {
 			"VeryEasyToUse": "This reason is one of the main ones for developers. Semantic UI is very intuitive.",
 			"LesstTimeToDesignAPage": "Naming Semantic UI classes with meaningful names not only make the learning curve shorter but also makes developing projects more intuitive and faster.",
@@ -313,7 +313,7 @@
 			"framework"
 		],
 		"shortDesc": "Most secured frontend framework",
-		"desc": "<p>Angular is an open-source typescript based framework by Google used to build client-side single-page web applications. Angular takes inspiration from <a href=\"\/react.js\">React<\/a> with MVW architecture and transfer it to component-based architecture.</p><p> For today its one of the most secured front end JavaScript framework. With Angular you can build small application to enterprise-scale applications.</p>",
+		"desc": "<p>Angular.js is open-source typescript framework develop by google. Main use is for singe-page applications. its use standard HTML as template and extend it to build your own application.</p><p>For creating SPA its use Model View Controller and in same time its making sure that your application runs in every browser - no needed to think about compatibility. Angular also handle updating data and html structure based on data changes. So you can focus on developing application logics.</p><p>For communication between model and view uses scope and functions are written in controller. For some function it has built in services that helps you build your application faster.</p><p>Angular is an open-source typescript based framework by Google used to build client-side single-page web applications. Angular takes inspiration from React with MVW architecture and transfer it to component-based architecture.  For today its one of the most secured front end JavaScript framework. With Angular you can build small application to enterprise-scale applications.</p>",
 		"pros": {
 			"Components": "After MVW architecture Angular goes with a strictly component-based architecture that facilitates reusability.",
 			"ServerPerformance": "Angular supports out of the box caching and tons of features to ensure fast server performance.",
@@ -346,7 +346,7 @@
 			"framework"
 		],
 		"shortDesc": "Specialsed components based on flexbox",
-		"desc": "<p>Another popular css framework among developer. Comes with same features <a href=\"\//foundation\">popular frameworks<\/a> as other frameworks but with useful specialised components.</p><p>UI Kit has flexbox-based layouts with UIkit using plain HTML. As <a href=\"\//foundation\">boostrap<\/a> and other it has also utility classes to boost your developer powers.",
+		"desc": "<p>UI kit is modular css framework for web and applications. It offers all the major features as other css frameworks. On top of that UI kit offers specialised components that enchant your applications, also saves your time.<p>Noticeable feature is also flexbox based layout that is easy to understand and implement.</p><p>UI kit use html to create components and grids. That means its using semantic html tags and for components reusable tags to avoid additional styling.</p><p>Even fact that UI kit is ready to use with fancy components you can customize it with sass or less. Or event build up your custom components. For specialized customization it offers utility classes that expand components possibilities.</p>",
 		"pros": {
 			"EasyToLearn": "With easy to understand classes ad unique flexbox system easy to start.",
 			"Themes": "Comes with plenty ready to use themes.",
@@ -376,7 +376,7 @@
 			"framework"
 		],
 		"shortDesc": "Atomic css for components",
-		"desc": "<p>Tailwind is implementing Atomic CSS. The idea behind Tailwind is that instead of starting out with pre-styled cookie-cutter <a href=\"\//elementui\">components<\/a>, you build everything from the ground up using utility classes. The learning curve is definitely higher on this one, especially if Atomic CSS is new to you.</p>",
+		"desc": "<p>Tailwind is implementing Atomic CSS. The idea behind Tailwind is that instead of starting out with pre-styled cookie-cutter components, you build everything from the ground up using utility classes. That meas you don't have to leave  your html file and you can focus on developing your app.</p><p>Tailwind gives different approach to css(Sass or less). Instead of creating specific component you use some predefined classes that makes your components. Sound easy right? Well its is. All classes are easy to memorize. So within two hours you are able to use tailwind at 100%.</p><p>With this you are able to create responsive layout and components within minutes. Even if you are missing some properties or class you can easily create your own that  fits your needs. Great feature is that tailwind comes with removing unused classes when building for production. In that case your app or website will not contain unused css and speed up your website performance.</p>",
 		"pros": {
 			"PredefinesClasses": "No needed to create new classes. Everything was already created.",
 			"Names": "Tailwind comes with meaningful variables.",
@@ -405,7 +405,7 @@
 			"framework"
 		],
 		"shortDesc": "Sass based components with ease",
-		"desc": "One of the popular <a href=\"\/list\">css frameworks<\/a>. Has easy to implement CSS components. Its build on Sass so its easy to customize and comes with nice responsive features.",
+		"desc": "<p>Foundation is advanced css framework focus on designing responsive applications. Developing with foundation is fast thas to Sass compiler. With that speed you can have lots of components ready to use or ready to customize with Sass.</p><p>In same package you got a power grid system that is easy to understand and implementation is easy. You can use some javascript plugins that can make your website alive. Same as bootstrap Foundation is mobile first framework. So no worries about responsive layout and so on. Once you understand basic concepts of foundation you will understand even more difficult components and systems.</p>",
 		"pros": {
 			"MobileFirst": "Written with mobile first in mind.",
 			"EasyToCustomize": "With Sass you can redesign Foundation to your need without overriding.",
@@ -432,7 +432,7 @@
 			"icons"
 		],
 		"shortDesc": "Most popular icon pack",
-		"desc": "Started in 2012 is the most popular icon collection. The library includes a collection of more than 1,500 icons you can use for free. It supports popular web development frameworks such as <a href=\"\//react.js\">React<\/a>, <a href=\"\//angular.js\">Angular<\/a>, and Vue as well popular design tools such as Sketch and Adobe apps.",
+		"desc": "<p>Font Awesome is one of the most popular icons pack. Started in 2012 and since then its gaining popularity. So far you can get 1600+ icons and even 7800 icons as premium. Yes Font Awesome have some premium icons, that with your needs.</p><p>Another great think is integration with other frameworks or components. Since is so popular every modern CMS, system or framework has plugin or integration with font Awesome.</p><p>With premium you can also create your own special pack that fits your project needs. You can add font awesome icons or add your very own icons to the pack. If you include font awesome css you can get also some modifications and animations that expand possibilities how to use Font Awesome</p>",
 		"pros": {},
 		"cons": {},
 		"githubStars": "+65k",
@@ -452,7 +452,7 @@
 			"icons"
 		],
 		"shortDesc": "Biggiest library of graphics",
-		"desc": "2,000,000+ Free vector icons in SVG, PSD, PNG, EPS format or as ICON FONT. Thousands of free icons in the largest database of free vector icons.",
+		"desc": "<p>Flaticon is an online database containing PNG,SVG,ESP, PSD icons that you can use in your project. With the option of creating your own icon collection you get unlimited power of using icons. Even if you have your very special icons, Flaticon allows you to upload them and use them. All icons can be used as font for web or apps or you can download them in various formats like png, svg, psd or eps.</p><p>Flaticon also offers a powerful editor where you can edit icons. You can change color, rotate, scale and move icon in the grid. With those options you can be sure that your icons are unique.</p>",
 		"pros": {},
 		"cons": {},
 		"githubStars": "",
@@ -476,7 +476,7 @@
 			"js"
 		],
 		"shortDesc": "Desktop UI library",
-		"desc": "<p>ElementUI is <a href=\"\//vue.js\">Vue<\/a> component library with world wide community. Its not a basic component library, but also full UI kit that designer and product managers can work with.</p><p> Its aiming on desktop UI but also has mobile version in mind. Also comes with grid system.</p>",
+		"desc": "<p>Element UI is Vue components library that provide ready to go solution for building websites and applications. This Component library has modern design, huge library of components, translations, animations and options to customize everything.</p><p>With design you can create desktop or mobile apps and with power of SASS you can change colors, shapes basically everything. Element UI has components for layout so not headache with positioning.</p><p>With huge component library you can choose right components four your needs. And the best part is that you can easy change view, behavior and option of each component.</p><p>Main language of Element UI is Chinese, but has documentation in English ofcourse and provide translations plugin so you can create multi language apps.</p><p>Also you can enchant user experience with animations and micro animations that will provide better experience for users.</p><p>Last important think is that ElementUI is written Desktop first. So main focus is on desktop apps, but with power of Sass it has also mobile versions of components and responsive layouts.</p>",
 		"pros": {
 			"Components": "ElementUI comes with a lot of components that are ready to use.",
 			"Fast": "easy and fast prototyping or creating small application.",
@@ -509,7 +509,7 @@
 			"js"
 		],
 		"shortDesc": "Material desing for all systems",
-		"desc": "<p>Material is a design system that can be applied for mobile devices and modern web browsers.</p><p> It comes with full guidelines on how to use it and give some useful tips. You can build web, android or iOS applications. With material you got ready to use components and <a href=\"\/font-Awesome\">icons<\/a>.</p>",
+		"desc": "<p>Material is a design system that can be applied for mobile devices and modern web browsers. It comes with full guidelines on how to use it and give some useful tips.</p><p>With guidance you can build the same visuals as popular Google apps. Without any changes to variables or other elements components and apps or website look will fits all time.</p><p>Material offers also components, its huge pack of them. And every component has variations and guidelines that tells you what to do. If the components is not fitting your needs material design offers alternative that you can use.</p><p>Material also offers to import only components that you need. In same time you can create your own theme that will fit your needs. With power of Sass just overwrite some variables and material design handle rest.</p><p>Great feature is also wrapper for other frameworks that work with material design. In case you don't want to use Material Web Components.</p>",
 		"pros": {
 			"DesignSystem": "ElementUI comes with a lot of components that are ready to use.",
 			"ComponentsList": "Material has huge library components for all devices.",
@@ -538,7 +538,7 @@
 			"js"
 		],
 		"shortDesc": "Comunicate trought RESTfull API",
-		"desc": "<p>Backbone.js is another JS framework to build SPA application. From other JS frameworks like <a href=\"\/vue.js\">Vue.js<\/a>, <a href=\"\/react.js\">React<\/a> etc. the key is using MVP structure and saving filesize. GZip version is 7.9kb only. Another main advantage is easy communication with RESTful API.",
+		"desc": "<p>Backbone.js is another JS framework to build SPA applications. From other JS frameworks like Vue.js, React etc. the key is using MVP structure and saving filesize.</p><p>Backbone is attempting to create a minimal set of data-structure and user interface that are useful for building web applications. In basic backbone is taking care of all layers so you can focus on building your application.</p><p>Great advantage are layer each layer of app is responsible for its part so you will always know where to write your code. This is also well documented in code and on official page.</p>Backbone is also well annotated in code so you will quickly understands what to do in that layer.</p>",
 		"pros": {
 			"SmallSize": "Everything what you need is in small 7.9kb package.",
 			"CommentedCode": "The code is well commented and also documented.",
@@ -570,7 +570,7 @@
 			"js"
 		],
 		"shortDesc": "Build responsive apps with boostrap and vue.js",
-		"desc": "<p>Bootstrap vue is project where <a href=\"\/bootstrap\">Bootstrap<\/a> css framework and <a href=\"\/vue.js\">Vue.js<\/a> framework comes together. With this combination you can build responsive, mobile-first and Araia accessible apps and websites. Contain a lots of components and more than 1200 icons. Ready to use.",
+		"desc": "<p>Bootstrap Vue is component library that is powered by Bootstrap and Vue.js frameworks. This gives you power to build responsive, mobile-first applications of websites.</p><p>Bootstrap Vue offers huge list of components that are ready to use. Great part is that you can use knowledge of bootstrap to build same websites. So you can use same components as in Bootstrap CSS framework. For logic Vue.js is taking part. Thanks to Vue you can customize components behavior and look very easy.</p><p>Bootstrap Vue offers plenty of customization options. With this components library you can also integrate other plugins that work with Vue or Bootstrap so you are not limited.</p>",
 		"pros": {
 			"SmallSize": "Everything what you need is in small 7.9kb package.",
 			"CommentedCode": "The code is well commented and also documented.",

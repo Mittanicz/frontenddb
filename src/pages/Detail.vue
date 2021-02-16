@@ -106,6 +106,8 @@ export default class Detail extends Vue {
                 return 'connectdevelop';
             case 'components':
                 return 'cubes';
+            case 'testing':
+                return 'vial';                
             default:
                 return 'html5';
         }
@@ -121,7 +123,7 @@ export default class Detail extends Vue {
     }
 
     private translateIconGroup(icon: string): string {
-        if (icon != 'icons' && icon != 'components') {
+        if (icon != 'icons' && icon != 'components' && icon != 'testing') {
             icon = 'fab';
         } else {
             icon = 'fas';

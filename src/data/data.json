@@ -84,6 +84,35 @@
 		"website": "https://www.icomoon.com/"
 	},
 	{
+		"name": "cypress",
+		"displayName": "Cypress",
+		"logo": "cypress.png",
+		"stack": [
+			"Testing",
+			"Javascript"
+		],
+		"icons": [
+			"testing",
+			"js"
+		],
+		"shortDesc": "E2E testing with glance",
+		"desc": "<p>Cypress is a complete end to end solution for fast reliable testing. You can test literally everything that run in the browser. Cypress was primary develop for developers and tester to speed up your development process.</p><p>Cypress can aslo test mobile web apps with multiple resolutions and user agents. Also contain lots of function and way to test from UI, functions networking and more. In same time has best practices and examples.</p><p>Cypress also offers dashboard for project test results and management. All for free</p>",
+		"pros": {
+			"TestForEverything": "One tool rule them all. From UI to network",
+			"Dashboard": "Dashboard offers nice overview of your testing",
+			"HandleEverything": "From UI testing, components, network testing, user agents. One tool for everything"
+		},
+		"cons": {
+			"Large": "With those options and feature cypress is quite heavy and require a lot of resources",
+			"Documentation": "In some cases you need to use your imagination to find solution for you"
+		},
+		"githubStars": "+28k",
+		"publishDate": "2018",
+		"developerName": "Cypress.io",
+		"githubLink": "https://github.com/cypress-io/cypress",
+		"website": "https://www.cypress.io/"
+	},
+	{
 		"name": "ember.js",
 		"displayName": "Ember.js",
 		"logo": "ember.png",
@@ -179,6 +208,35 @@
 		"website": "https://materializecss.com"
 	},
 	{
+		"name": "jest",
+		"displayName": "Jest",
+		"logo": "jest.png",
+		"stack": [
+			"Testing",
+			"Javascript"
+		],
+		"icons": [
+			"testing",
+			"js"
+		],
+		"shortDesc": "Copomonent testing done right",
+		"desc": "<p>Jest is one of the most popular testing frameworks. Its maintained by Facebook and primary focus is on simplicity and support for large projects.</p><p>Jest is written in way that is easy to support major js frameworks like vue, Angular and react. In same time Jest support Typescript, babel and node.js.</p><p>One of great feature is zero configuration. You can jump right into test writing. Every test is run in isolation sou you can be sure about results. Its running blazing fast and comes with more features</p>",
+		"pros": {
+			"ReadyToUse": "Zero configuration needed to start testing",
+			"EasyMocking": "Jest handle your import so its easy mocking",
+			"Documentation": "Every function and process is well documented with examples"
+		},
+		"cons": {
+			"Overwhelming": "With those great power you can be easy overwhelmed",
+			"SpecialCases": "For special cases you need to install plugins that are not updated often"
+		},
+		"githubStars": "+35k",
+		"publishDate": "2016",
+		"developerName": "Facebook",
+		"githubLink": "https://github.com/facebook/jest/stargazers",
+		"website": "https://jestjs.io/"
+	},
+	{
 		"name": "svelte.js",
 		"displayName": "Svelte.js",
 		"logo": "svelte.png",
@@ -270,6 +328,34 @@
 		"developerName": "Jeremy Thomas",
 		"githubLink": "https://github.com/jgthms/bulma",
 		"website": "https://bulma.io/"
+	},
+	{
+		"name": "mochajs",
+		"displayName": "Mocha JS",
+		"logo": "mochajs.png",
+		"stack": [
+			"Testing",
+			"Javascript"
+		],
+		"icons": [
+			"testing",
+			"js"
+		],
+		"shortDesc": "Test your code in old way",
+		"desc": "<p>MochaJS is test framework for node.js applications. It also support browsers, asynchronou testing, reporting.</p><p>With MochaJs is writing test is easy. Over years it got mark of well-established framework. Thanks to that on internet you find out many tutorials that guide you through installation to usage. Keep in mind that Mocha run tests serially.</p><p>So you will get accurate report and in same time you will see any exception when running tests. You can Mocha with any JS library or with your custom created</p>",
+		"pros": {
+			"Documentation": "With big documentation and tutorials you will not get overwhelmed",
+			"Stable": "Since Mocha is from 2011 its well tested on many project so no worries about major changes"
+		},
+		"cons": {
+			"InitialSetup": "On start Mocha requires more time to make thinks working",
+			"Old": "Mocha is here from 2011 and its loosing popularity now"
+		},
+		"githubStars": "+20k",
+		"publishDate": "2011",
+		"developerName": "Community",
+		"githubLink": "https://github.com/mochajs/",
+		"website": "https://mochajs.org/"
 	},
 	{
 		"name": "semanticui",
@@ -583,8 +669,66 @@
 		},
 		"githubStars": "+13k",
 		"publishDate": "2019",
-		"developerName": "Jeremy Ashkenas",
+		"developerName": "Bootstrap",
 		"githubLink": "https://github.com/bootstrap-vue/bootstrap-vue",
 		"website": "https://bootstrap-vue.org/"
+	},
+	{
+		"name": "puppeteer",
+		"displayName": "Puppeteer",
+		"logo": "puppeteer.png",
+		"stack": [
+			"Testing",
+			"Javascript"
+		],
+		"icons": [
+			"testing",
+			"js"
+		],
+		"shortDesc": "Test your app like never before",
+		"desc": "<p>Puppeteer is testing library focus on testing web apps. Running through the chrome browser you are able to test app like normal users do. With the option to generate PDF or screenshots of pages.</p><p>Also with puppeteer you can submit for simulating user input  and more. Puppeteer also offers chrome extension to enchant your testing experience.</p>",
+		"pros": {
+			"Testing": "Generating screenshot of each test is great advantage",
+			"UserInput": "With option to really simulate user input will make your test reliable",
+			"Updated": "Test are always run in latest version of chrome with latest Javascript features"
+		},
+		"cons": {
+			"LessKnow": "Well there are more stable and popular testing frameworks",
+			"Documentation": "Even with good documentation you still need to search for some information on the internet"
+		},
+		"githubStars": "+69k",
+		"publishDate": "2018",
+		"developerName": "Puppeteer",
+		"githubLink": "https://github.com/puppeteer/puppeteer",
+		"website": "https://pptr.dev/"
+	},
+	{
+		"name": "nightwatch",
+		"displayName": "Nightwatch",
+		"logo": "nightwatch.png",
+		"stack": [
+			"Testing",
+			"Javascript"
+		],
+		"icons": [
+			"testing",
+			"js"
+		],
+		"shortDesc": "Test your code in multiple ways",
+		"desc": "<p>Nightwatch is browser automation powered by node.js. It's using the WebDriver API to run commands and browsers. Nightwatch is simple but powerful that enables you o build test using only javascript. After installation you are ready to go.</p><p>Nightwatch support running test in multiple ways. In parallel, sequentially or in implicit waits. Running on selenium or WebDriver under the hood its runnin real browsers.</p><p>With easy syntax you are also able to extend functionality of nightwatch.</p>",
+		"pros": {
+			"ModernE2E": "Zero configuration and powerful testing with Web API",
+			"Evolving": "Nightwatch team is still listening to new suggestions",
+			"RealBrowsers": "Running on real drivers tests are reliable"
+		},
+		"cons": {
+			"New": "Nightwatch is getting popular now so community is smaller",
+			"Updates": "In the way that its not stable like cypress you can expect more updates and fixes"
+		},
+		"githubStars": "+28k",
+		"publishDate": "2018",
+		"developerName": " Pine View Software AS ",
+		"githubLink": "https://github.com/nightwatchjs/nightwatch",
+		"website": "https://nightwatchjs.org/"
 	}
 ]

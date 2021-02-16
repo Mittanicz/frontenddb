@@ -59,7 +59,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faIcons, faTh, faCubes, faList } from '@fortawesome/free-solid-svg-icons';
+import { faIcons, faTh, faCubes, faList, faVial } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5, faJs, faConnectdevelop, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import LMainLayout from '@/layout/MainLayout.vue';
 import ItemCard from '@/components/ItemCard.vue';
@@ -69,7 +69,7 @@ import CButton from '@/components/Button.vue';
 import LSideBar from '@/components/SideBar.vue';
 import data from '@/data/data.json';
 
-library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop, faList, faTh);
+library.add(faJs, faHtml5, faIcons, faCss3Alt, faTh, faCubes, faConnectdevelop, faList, faTh, faVial);
 
 @Component({
     components: {
@@ -107,6 +107,10 @@ export default class List extends Vue {
         {
             checked: false,
             value: 'Javascript',
+        },
+        {
+            checked: false,
+            value: 'Testing',
         },
     ];
     public name: string = 'list';

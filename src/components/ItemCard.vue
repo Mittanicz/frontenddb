@@ -35,13 +35,15 @@ export default class ItemCard extends Vue {
                 return 'connectdevelop';
             case 'components':
                 return 'cubes';
+            case 'testing':
+                return 'vial';
             default:
                 return 'html5';
         }
     }
 
     private translateIconGroup(icon: string): string {
-        if (icon != 'icons' && icon != 'components') {
+        if (icon != 'icons' && icon != 'components' && icon != 'testing') {
             icon = 'fab';
         } else {
             icon = 'fas';

@@ -34,6 +34,17 @@ const routes: Array<RouteConfig> = [
         }
     },
     {
+        path: '/admin',
+        name: 'Admin',
+        component: () => import('@/module/admin/page/Admin.vue'),
+    },
+    {
+        path: '/admin-:stackNameUrl',
+        name: 'AdminDetail',
+        component: () => import('@/module/admin/page/Detail.vue'),
+        props: true,
+    },
+    {
         path: '/:stackNameUrl',
         name: 'Detail',
         component: () => import('@/pages/Detail.vue'),
